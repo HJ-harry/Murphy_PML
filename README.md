@@ -1,3 +1,10 @@
-# Murphy_PML
+## PRML Study (Korean Ver.)
 
-Github page for summarizing the book "Probabilistic Machine Learning: An Introduction" by Kevin Murphy [book link](https://probml.github.io/pml-book/book1.html?fbclid=IwAR3YvR8q5YPUx83YegMCJHILlXvMtdyUtfBEETdaH9YAZoWjuv4sSrCwrsM)
+- Summary for PRML Book. ([Link](http://research.microsoft.com/en-us/um/people/cmbishop/prml/))
+
+## Link
+
+- [http://norman3.github.io/prml](http://norman3.github.io/prml)
+
+
+

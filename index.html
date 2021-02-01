@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="well-sm">
+      <h3>Introduction</h3>
+      <p>본 블로그에서는 blah blah blah </p>
+    </div>
+    
+    <!-- <div class="well-sm">
+      <h3>New Posts</h3>
+      <ul class="post-list">
+	      {% for post in site.posts limit:3 %}
+	      <li>
+	        <h4>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	        </h4>
+	        <p><span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span></p>
+	        {{ post.excerpt }}
+          <hr/>          
+	      </li>
+	      {% endfor %}
+      </ul>
+    </div> -->
+  </div>
+  
+  <div class="col-sm-12 col-md-6">
+    <div class="well-sm">
+      <h3>Chapter 1. 소개 (Introduction)</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/0">0. 프롤로그 (Prolog)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/1">1. 예제 : 다항식 커브 피팅 (Example: Polynomial Curve Fitting)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/2">2. 확률 이론 (Probability Theory)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/3">3. 모델 선택 (Model Selection)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/4">4. 차원의 저주 (The Curse of Dimension)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/5">5. 결정 이론 (Decision Theory)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter01/6">6. 정보 이론 (Information Theory)</a></li>
+      </ul>
+    </div>
+    <div class="well-sm">
+      <h3>Chapter 2. 확률 분포 (Probability Distributions)</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/0">0. 프롤로그 (Prolog)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/1">1. 이진 변수 (Binary Variables)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/2">2. 다항 분포 (Multinomial Variables)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/3_1">3. 가우시안 분포 (The Gaussian Distributions) - Part.I</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/3_2">3. 가우시안 분포 (The Gaussian Distributions) - Part.II</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/3_3">3. 가우시안 분포 (The Gaussian Distributions) - Part.III</a></li>      
+        <li><a href="{{ site.baseurl }}/docs/chapter02/4">4. 지수 분포족 (The Exponential Family)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter02/5">5. 비모수적 방법들 (Nonparametric Methods)</a></li>
+      </ul>
+    </div>
+    <div class="well-sm">
+      <h3>Chapter 3. 회귀 선형 모델 (Linear Models for Regression)</h3>
+      <ul>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/0">0. 프롤로그 (Prolog)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/1">1. 선형 기저 함수 모델 (Linear Basis Function Model)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/2">2. 바이어스-분산 분해 (The Bias-Variance Decomposition)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/3">3. 베이지언 선형 회귀 (Bayesian Linear Regression)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/4">4. 베이지언 모델 비교 (Bayesian Model Comparison)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/5">5. 증거 영역 근사 (Evidence Approximation)</a></li>
+        <li><a href="{{ site.baseurl }}/docs/chapter03/6">6. 고정된 기저 함수의 제약점 (Limitations of Fixed Basis Functions)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
