@@ -14,4 +14,7 @@ title: "1. Introduction"
   
 ### 1.2 Supervised Learning
 
-- Supervised learning에서는 과제 \\(T를 통해 \mathbb{x} \in \mathcal{X} \mapsto \mathbb{y} \in \mathcal{Y} \\)를 학습
+- Supervised learning에서는 과제 \\(T\\)를 통해 \\(\mathbb{x} \in \mathcal{X} \mapsto \mathbb{y} \in \mathcal{Y} \\)를 학습한다.
+- \\(mathbb{x}\\)는 features, covariates, predictor 등으로 불리며 dimension이 fix 되어있는 vector이다. (예를 들어 image의 pixel)
+- output인 \\(mathbb{y}\\)는 label, target, response 등으로 불리며 마찬가지로 dimension이 fix 되어있다.
+- 지도학습에서의 경험 E는 N개의 input-output pair로 주어진다. \\(mathcal{D} = \{(\mathbb{x}_n, \mathbb{y}_n)\}_{n=1}^N\\)
