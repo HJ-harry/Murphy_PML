@@ -6,7 +6,7 @@ title: "1. Bernoulli and binomial distributions"
 
 - 가장 간단한 probability distribution으로 **Bernoulli distribution**을 들 수 있다.
 
-$$Ber(y|\theta) \coleq \theta^{y} (1 - \theta)^{1-y}  \qquad{(3.1)}$$
+$$Ber(y|\theta) \coloneqq \theta^{y} (1 - \theta)^{1-y}  \qquad{(3.1)}$$
 
 - 여기서 \\( 0 \leq \theta \leq 1 \\) 은 \\( y = 1 \\) 인 **확률**이고, Bernoulli distribution으로부터 샘플링할 때 \\( Y \tilde Ber(\theta) \\) 와 같이 나타낸다.
 - Bernoulli distribution 은 **Binomial distribution**의 special case이다.
@@ -15,11 +15,11 @@ $$Ber(y|\theta) \coleq \theta^{y} (1 - \theta)^{1-y}  \qquad{(3.1)}$$
   - s: 앞면이 나온 횟수
   - \\( \begin{pmatrix} N \\ s \end{pmatrix} \\): \\( N \\) choose \\( k \\) 로 **binomial coefficient** 라고도 부른다.
 
-$$Bin(s|N,\theta) \coleq \begin{pmatrix} N \\ s \end{pmatrix} \theta^s (1 - \theta)^{N-s} \qquad{(3.3)}$$
+$$Bin(s|N,\theta) \coloneqq \begin{pmatrix} N \\ s \end{pmatrix} \theta^s (1 - \theta)^{N-s} \qquad{(3.3)}$$
 
 ### 1.2 Sigmoid (logistic) function)
 
 - Bernoulli distribution을 모델링에 쓸 수 있는 대표적인 예를 알아보자.
 - \\( \mathbb{x} \in \mathcal{X} \\) 를 input으로 하여 binary class인 \\( y \in \{0, 1\} \\) 를 예측할 때, 아래 **conditional probability distribution**을 사용할 수 있다.
 
-$$p(y|\bm{x}, \bm{\theta}) = \textrm{Ber}(y|\sigma(f(\bm{x};\bm{\theta})))$$
+$$p(y|\boldmath{x}, \boldmath{\theta}) = \textrm{Ber}(y|\sigma(f(\boldmath{x};\boldmath{\theta})))$$
