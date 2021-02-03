@@ -11,9 +11,9 @@ $$\textrm{Ber}(y|\theta) := \theta^{y} (1 - \theta)^{1-y}  \qquad{(3.1)}$$
 - 여기서 \\( 0 \leq \theta \leq 1 \\) 은 \\( y = 1 \\) 인 **확률**이고, Bernoulli distribution으로부터 샘플링할 때 \\( Y \sim \textrm{Ber}(\theta) \\) 와 같이 나타낸다.
 - Bernoulli distribution 은 **Binomial distribution**의 special case이다.
 - 반대로 말해 Bionomial distribution은 Bernoulli distribution의 generalization인데, trial이 1 보다 클 때, 예를 들어 동전을 여러 번 던졌을 때의 확률이다.
-  - N: 동전을 던진 횟수
-  - s: 앞면이 나온 횟수
-  - \\( \begin{pmatrix} N \\ s \end{pmatrix} \\): \\( N \\) choose \\( k \\) 로 **binomial coefficient** 라고도 부른다.
+  - \\( N \\): 동전을 던진 횟수
+  - \\( s \\): 앞면이 나온 횟수
+  - \\( \begin{pmatrix} N \\ k \end{pmatrix} \\): \\( N \\) choose \\( k \\) 로 **binomial coefficient** 라고도 부른다.
 
 $$\textrm{Bin}(s|N,\theta) := \begin{pmatrix} N \\ s \end{pmatrix} \theta^s (1 - \theta)^{N-s} \qquad{(3.3)}$$
 
