@@ -20,25 +20,25 @@ $$\textrm{Bin}(s|N,\theta) := \begin{pmatrix} N \\ s \end{pmatrix} \theta^s (1 -
 ### 1.2 Sigmoid (logistic) function)
 
 - Bernoulli distribution을 모델링에 쓸 수 있는 대표적인 예를 알아보자.
-- \\( \boldsymbol{\mathbb{x}} \in \mathcal{X} \\) 를 input으로 하여 binary class인 \\( y \in \{0, 1\} \\) 를 예측할 때, 아래 **conditional probability distribution**을 사용할 수 있다.
+- \\( \mathbf{x} \in \mathcal{X} \\) 를 input으로 하여 binary class인 \\( y \in \{0, 1\} \\) 를 예측할 때, 아래 **conditional probability distribution**을 사용할 수 있다.
 
-$$p(y|\boldsymbol{\mathbb{x}}, \boldsymbol{\theta}) = \textrm{Ber}(y|f(\boldsymbol{\mathbb{x}};\boldsymbol{\theta})) \qquad{(3.5)}$$
+$$p(y|\mathbf{x}, \boldsymbol{\theta}) = \textrm{Ber}(y|f(\mathbf{x};\boldsymbol{\theta})) \qquad{(3.5)}$$
 
-- 이 때 \\( f(\boldsymbol{\mathbb{x}};\boldsymbol{\theta})) \\)는 Bernoulli distribution의 mean을 예측하는 ambiguous한 함수이고, 이에 관한 내용은 추후에 다룬다.
+- 이 때 \\( f(\mathbf{x};\boldsymbol{\theta})) \\)는 Bernoulli distribution의 mean을 예측하는 ambiguous한 함수이고, 이에 관한 내용은 추후에 다룬다.
 - 함수 \\( f \\) 는 결국 probability를 예측해야 하기에 \\( 0 \leq f \leq 1 \\) 이라는 제약이 붙고, 이에서 좀 더 자유로워지기 위해 **sigmoid** 또는 **logistic** 함수를 이용한다.
 
-$$p(y|\boldsymbol{\mathbb{x}}, \boldsymbol{\theta}) = \textrm{Ber}(y|\sigma(f(\boldsymbol{\mathbb{x}};\boldsymbol{\theta}))) \qquad{(3.12)}$$
+$$p(y|\mathbf{x}, \boldsymbol{\theta}) = \textrm{Ber}(y|\sigma(f(\mathbf{x};\boldsymbol{\theta}))) \qquad{(3.12)}$$
 
 $$\sigma(a) := \frac{1}{1 + e^{-a}} \qquad{(3.13)}$$
 
--이 때 편의를 위해 \\( a = f(\boldsymbol{\mathbb{x}};\boldsymbol{\theta}) \\) 를 정의하며, 이를 **log odds** 라고 한다.
+-이 때 편의를 위해 \\( a = f(\mathbf{x};\boldsymbol{\theta}) \\) 를 정의하며, 이를 **log odds** 라고 한다.
 -log odds는 다음과 같이 정의되며, 이를 이용해 여러가지 용이한 식을 얻을 수 있다.
 
 $$\log{(\frac{p}{1 - p})} = \log{(\frac{e^a}{1 + e^a} \frac{1 + e^a}{1})} = \log{(e^a)} = a \qquad{(3.17)}$$
 
-$$p(y = 1|\boldsymbol{\mathbb{x}}, \boldsymbol{\theta}) = \frac{1}{1 + e^{-a}} = \sigma(a) \qquad{(3.15)}$$
+$$p(y = 1|\mathbf{x}, \boldsymbol{\theta}) = \frac{1}{1 + e^{-a}} = \sigma(a) \qquad{(3.15)}$$
 
-$$p(y = 0|\boldsymbol{\mathbb{x}}, \boldsymbol{\theta}) = 1 - \frac{1}{1 + e^{-a}} = \sigma(-a) \qquad{(3.16)}$$
+$$p(y = 0|\mathbf{x}, \boldsymbol{\theta}) = 1 - \frac{1}{1 + e^{-a}} = \sigma(-a) \qquad{(3.16)}$$
 
 - **logit function**은 \\( p \\) 를 log-odds인 \\( a \\) 로 매핑시키며, **logistic function** 은 그 역을 수행한다.
 
@@ -51,6 +51,6 @@ $$\textrm{logistic}(a) := p \qquad{(3.19)}$$
 ### 1.3 Binary logistic regression
 
 - logistic function이 \\( f \\) 의 range에 무관하게 값을 \\( [0, 1] \\) 로 squeeze 시켜주기 때문에, 0.5인 값을 **decision boundary**로 이용해서 binary classification problem을 푸는 데에 이용할 수 있다.
-- 책에서는 \\( f(\boldsymbol{\mathbb{x}};\boldsymbol{\theta})) = \boldsymbol{\mathbb{w}}^T \boldsymbol{\mathbb{x}} \\) 와 같은 linear model을 이용하며, 실제로 간단하게 많이 씅니다.
+- 책에서는 \\( f(\mathbf{x};\boldsymbol{\theta})) = \mathbf{w}^T \mathbf{x} \\) 와 같은 linear model을 이용하며, 실제로 간단하게 많이 씅니다.
 
 
