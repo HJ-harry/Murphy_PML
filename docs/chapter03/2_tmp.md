@@ -40,14 +40,14 @@ $$p(y) := \frac{d}{dy}P(y) \qquad{(3.45)}$$
 
 - Gaussian의 pdf는 다음과 같다. (앞에 곱해지는 \\( \sqrt{2\pi\sigma^2} \\)) 항은 pdf의 총 적분값이 1이 되도록 normalize해주는 constant이다.
 
-$$\mathcal{N}(y|\mu,\simga^2) := \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2\sigma^2}(y - \mu)^2} \qquad{(3.46)}$$
+$$\mathcal{N}(y|\mu,\sigma^2) := \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2\sigma^2}(y - \mu)^2} \qquad{(3.46)}$$
 
 - 또한, 특정 interval 내의 확률값은 식 (3.41)을 통해 구할 수 있다고 했는데, \\( a = y, b = y + dy \\)로 두면
 
 $$\textrm{Pr}(y \leq Y \leq y + dy) \approx p(y)dy \qquad{(3.48)}$$
 
 - 결국에 아주 작은 interval내의 면적 값은 pdf 값에다 interval의 width를 곱한 값이다.
-- 따라서 width가 매우 작다면 pdf의 한 점에서의 값은 1보다 클 수 있음을 의미하며, 예를 들어 \\( \mathcal{N}(0|0,0.1) = 3.99 \\) 이다.
+- 따라서 width가 매우 작다면 pdf의 한 점에서의 값은 1보다 클 수 있음을 의미한다.
 - pdf를 통해 **mean(expected value)** 와 **variance**도 정의된다.
 - Gaussian의 경우 mean 값이 \\( \mu \\)로 간단하게 나오지만, 다른 pdf 중 finite integral을 갖지 않는경우 mean 값이 정의되지 않을 수도 있다.
 
