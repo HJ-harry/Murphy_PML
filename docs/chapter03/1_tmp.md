@@ -63,18 +63,31 @@ $$p_c = \frac{e^{a_c}}{Z(\mathbf{a})} = \frac{e^{a_c}}{\Sigma_{c'=1}^C e^{a_{c'}
   - ```np.exp(-1000) = 0```
 - 이를 해결하기 위해 아래 property를 이용할 수 있다.
 
-$$\log \Sum_{c=1}^C \exp (a_c) = m + \log \Sum_{c=1}^C \exp (a_c - m) \qquad{(3.34)}$$
+$$\log \sum_{c=1}^C \exp (a_c) = m + \log \sum_{c=1}^C \exp (a_c - m) \qquad{(3.34)}$$
 
 - 위 property는 arbitrary한 \\( m \\) 에 모두 적용되며, 따라서 overflow를 막기 위헤 보통 \\(  m = \max_c a_c \\) 를 이용한다.
 - 이러한 property를 이용하는 것을 **log-sum-exp trick** 이라고 부르는데, ```lse``` 함수를 계산하는 데에 쓰이기 때문이다.
 
-$$\textrm{lse}(\mathbf{a}) := \log \Sum_{c=1}^C \exp (a_c) \qquad{(3.35)}$$
+$$\textrm{lse}(\mathbf{a}) := \log \sum_{c=1}^C \exp (a_c) \qquad{(3.35)}$$
 
 - 이를 이용하면 logit을 이용해 확률값들을 구할 수 있는데, 방식은 다음과 같다.
 
 $$
 \begin{align}
-  p_c &= \exp (a_c - \log \Sum_{c'=1}^C e^{a_{c'}}) \\
+  p_c &= \exp (a_c - \log \sum_{c'=1}^C e^{a_{c'}}) \\
   &= \exp (a_c - \textrm{lse}(\mathbf{a}))
 \end{align}
 $$
+
+- 이후에 이를 이용해 ```cross-entropy``` loss를 계산 하는 데에 이용할 수 있다.
+- 물론 이런 trick 없이 logit으로부터 직접적으로 ```CE loss```를 계산하는 방법도 있다.
+
+$$\mathcal{L} = - [\mathbb{I}(y = 0)\log p_0 + \mathbb{I}(y = 1) \log p_1] \qquad{(3.37)}$$
+
+- 위와 같이 정의된 ```BCE loss```를 계산할 때, 각 항은 아래와 같이 \\( lse() \\) 함수를 이용해 계산할 수 있다.
+
+$$\log p_1 = \log (\frac{1}{1 + \exp (-a)}) = \log (1) - log (1 + \exp (-a)) = 0 - \textrm{lse}([0, -a]) \qquad{(3.38)}$$
+
+$$\log p_0 = \log (\frac{1}{1 + \exp (+a)}) = \log (1) - log (1 + \exp (+a)) = 0 - \textrm{lse}([0, +a]) \qquad{(3.39)}$$
+
+
