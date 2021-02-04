@@ -6,7 +6,7 @@ title: "3. Univariate Gaussian (normal) distribution"
 
 -본 단원에서는 **Gaussian distribution(normal distribution)**을 다룬다.
 
-###1. Cumulative distribution function
+### 1. Cumulative distribution function
 
 - continuous random variable \\( Y \\)가 있을 때, 이에 대한 **cumulative distribution function(cdf)**는 다음과 같이 정의된다.
 
@@ -33,14 +33,14 @@ $$\Phi(y;\mu,\sigma^2) := \int_{-\infty}^y \mathcal{N}(z|\mu,\sigma^2)dz = \frac
 - \\( Y \\) 의 cdf가 \\( P \\) 라고 할 때, cdf의 값이 \\( q \\) 를 갖게 하는 \\( y_q \\) 를 \\( q' \\)th **quantile**이라고 한다.
 - \\( \Phi \\) 가 standard normal distribution의 cdf라고 할 때, 이의 역함수인 \\( \Phi^{-1} \\) 를 **probit function**이라고 한다.
 
-###2. Probability density function
+### 2. Probability density function
 - **probability density function(pdf)**는 cdf를 미분한 함수로 정의한다.
 
 $$p(y) := \frac{d}{dy}P(y) \qquad{(3.45)}$$
 
 - Gaussian의 pdf는 다음과 같다. (앞에 곱해지는 \\( \sqrt{2\pi\sigma^2} \\)) 항은 pdf의 총 적분값이 1이 되도록 normalize해주는 constant이다.
 
-$$\mathcal{N}(y|\mu,\simga^2) := \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2\sigma^2}(y - \mu)^2} \qquad{(3.46)}
+$$\mathcal{N}(y|\mu,\simga^2) := \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2\sigma^2}(y - \mu)^2} \qquad{(3.46)}$$
 
 - 또한, 특정 interval 내의 확률값은 식 (3.41)을 통해 구할 수 있다고 했는데, \\( a = y, b = y + dy \\)로 두면
 
@@ -54,10 +54,10 @@ $$\textrm{Pr}(y \leq Y \leq y + dy) \approx p(y)dy \qquad{(3.48)}$$
 $$\mathbb{E}[Y] := \int_{\mathcal{Y}} y p(y) dy \qquad{(3.49)}$$
 
 $$
-\begin{equation}
+\begin{align}
   \mathbb{V}[Y] &:= \mathbb{E}[(Y - \mu)^2] = \int (y - \mu)^2 p(y) dy \\
   &= \int y^2 p(y) dy + \mu^2 \int p(y) dy - 2\mu \int y p(y) dy = \mathbb{E}[Y^2] - \mu^2
-\end{equation}
+\end{align}
 $$
 
 $$\mathbb{E}[Y^2] = \sigma^2 + \mu^2 \qquad{(3.52)}$$
@@ -72,11 +72,11 @@ $$p(y|\mathbf{x};\mathbf{\theta}) = \mathcal{N}(y|f_\mu(\mathbf{x};\mathbf{\thet
 - 식 (3.54)는 가장 일반적인 경우로, \\( f_\mu, f_\sigma \\) 가 각각 mean과 variance를 estimate한다.
 - **Homoscedastic regression**
   - Variance는 fix해두고 mean만 conditional하게 알고 싶은 경우
-  - \\( p(y|\mathbf{x};\mathbf{\theta}) = \mathcal{N}(y|\mathbf{w}^T \mathbf{x} + b, \sigma^2) \\)
+$$p(y|\mathbf{x};\mathbf{\theta}) = \mathcal{N}(y|\mathbf{w}^T \mathbf{x} + b, \sigma^2)$$
   - 얻어지는 모델은 **linear regression** 모델이다.
 - **Heteroskedastic regression**
   - Variance도 input-dependent하게 하고 싶은 경우
-  - \\( p(y|\mathbf{x};\mathbf{\theta}) = \mathcal{N}(y|\mathbf{w}_{\mu}^{T} \mathbf{x} + b, \sigma_{+}(\mathbf{w}_\sigma^T \mathbf{x})) \\)
+$$p(y|\mathbf{x};\mathbf{\theta}) = \mathcal{N}(y|\mathbf{w}_{\mu}^{T} \mathbf{x} + b, \sigma_{+}(\mathbf{w}_\sigma^T \mathbf{x}))$$
   - mean과는 다르게 variance는 양수여야 한다는 조건 때문에 softplus 함수를 이용한다.
   
 $$\sigma_{+}(a) = \log (1 + e^a) \qquad{(3.57)}$$
