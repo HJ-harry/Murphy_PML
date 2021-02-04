@@ -8,7 +8,7 @@ title: "2. Categorical and multinomial distributions"
 
 ### 1. Definition
 
-$$\textrm{Cat}(y|\mathbf{\mu}) := \prod_{c=1}^C \theta_{c}^{\mathrm{I}(y=c)} \qquad{(3.22)}$$
+$$\textrm{Cat}(y|\mathbf{\mu}) := \prod_{c=1}^C \theta_{c}^{\mathbb{I}(y=c)} \qquad{(3.22)}$$
 
 - 다시 말해, \\( y \\) 가 \\( c \\) 라는 값을 가질 때의 확률을 각각 \\( \theta_c \\) 로 나타낼 수 있다.
 - 당연하게도, 아래 두 조건을 충족시켜야 한다.
@@ -23,7 +23,7 @@ $$\textrm{Cat}(\mathbf{y}|\mathbf{\mu}) := \prod_{c=1}^C \theta_{c}^{y_c} \qquad
 - bionomial distribution이 bernoulli distribution의 generalization이었던 것처럼, categorical distribution의 generalization인 **multinomial distribution**도 존재한다.
 - \\( N \\) 번의 categorical trial이 있다고 생각하면, multinomial distribution은 아래와 같이 나타낼 수 있다.
 
-$$\textrm{Mu}(\mathbf{s}|N, \mathbf{\mu}) := \begin{pmatrix} N \\ s_{1} \dots s_{C} \end{pmatrix} \prod_{c=1}^C \theta_{c}^{s_c}
+$$\textrm{Mu}(\mathbf{s}|N, \mathbf{\mu}) := \begin{pmatrix} N \\ s_{1} \dots s_{C} \end{pmatrix} \prod_{c=1}^C \theta_{c}^{s_c} \qquad{(3.24)}$$
 
 ### 2. Softmax function
 
@@ -37,7 +37,7 @@ $$p(y|\mathbf{x},\mathbf{\theta}) = \textrm{Mu}(\mathbf{y}|1, f(\mathbf{x}; \mat
 
 $$\mathcal{S}(\mathbf{a}) := [\frac{e^{a_1}}{\Sigma_{c'=1}^C e^{a_{c'}}}, \dots , \frac{e^{a_C}}{\Sigma_{c'=1}^C e^{a_{c'}}}] \qquad{(3.28)}$$
 
-- 위 함수는 \\( \mathrm{R}^C \\) 를 \\( [0, 1]^C \\) 로 squeeze해준다.
+- 위 함수는 \\( \mathbb{R}^C \\) 를 \\( [0, 1]^C \\) 로 squeeze해준다.
 - eq. (3.28) 에 대해 input으로 들어가는 \\( \mathbf{a} = f(\mathbf{x}; \mathbf{\theta}) \\) 는 **logit**이라고 부르며, binary case의 log odds 의 generalization이다.
 - sigmoid function이 heaviside step function을 근사하는 데에 이용될 수 있었던 것처럼, softmax function에 temperature를 이용하여 **argmax function** 처럼 behave하게 할 수 있다.
 - softmax function의 temperature는 \\( \mathcal{S}(\mathbf{a}/T) \\) 의 \\( T \\) 이며, 이 값이 0에 가까워질수록 argmax function에 근사한다.
