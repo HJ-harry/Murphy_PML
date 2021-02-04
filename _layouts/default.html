@@ -5,7 +5,10 @@
     {% include topnav.html %}
     <div class="container">
       {{ content }}
-      {% include disqus.html %}
+      <!-- {% include disqus.html %} -->
+      {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+      {%- endif -%}
     </div>
     <div class="container">    
       {% include footer.html %}
