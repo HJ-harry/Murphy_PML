@@ -1,4 +1,4 @@
-I"E�<blockquote>
+I"�<blockquote>
   <p><strong>목표</strong> : 실수 범위의 입력 변수 \( x \) 를 관찰한 후에 이 관찰 값을 바탕으로 실수 범위의 타겟 \( t \) 의 값을 예측하고 싶다.</p>
 </blockquote>
 
@@ -121,9 +121,9 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.1a.png" alt="Figure 3.1a" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.1b.png" alt="Figure 3.1b" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.1c.png" alt="Figure 3.1c" height="180px" />
+  <img src="/images/Figure3.1a.png" alt="Figure 3.1a" height="180px" />
+  <img src="/images/Figure3.1b.png" alt="Figure 3.1b" height="180px" />
+  <img src="/images/Figure3.1c.png" alt="Figure 3.1c" height="180px" />
 </div>
 
 <ul>
@@ -231,7 +231,7 @@
   <li>그림 1.16에 이에 대한 개념이 잘 표현되어 있다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.16.png" alt="figure1.16" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure1.16.png" alt="figure1.16" class="center-block" height="200px" /></p>
 
 <ul>
   <li>그런데 임의의 \( x \) 데이터에 대해 \( y(x,{\bf w}) \) 에서 \( t \) 의 값이 가장 많이 발현될 가능성이 높다고 이야기할 수 있을까?</li>
@@ -357,7 +357,7 @@
 
 <h2 id="312-최소-제곱법의-기하학적-의미-geometry-of-least-squares">3.1.2. 최소 제곱법의 기하학적 의미 (Geometry of least squares)</h2>
 
-<p><img src="/Murphy_PML/images/Figure3.2.png" alt="figure3.2" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure3.2.png" alt="figure3.2" class="center-block" height="200px" /></p>
 
 <ul>
   <li>여기서는 최소 제곱법이 가지는 기하학적 의미를 생각해본다.</li>
@@ -516,7 +516,7 @@
   <li>아래 그림을 보면 다양한 \( q \) 에 대해 실제 파라미터가 가지게 되는 값의 범위 모양을 기술하고 있다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.3.png" alt="figure3.3" class="center-block" height="120px" /></p>
+<p><img src="/images/Figure3.3.png" alt="figure3.3" class="center-block" height="120px" /></p>
 
 <ul>
   <li>이 중 \( q=1 \) 인 경우를 <em>Lasso</em> 라고 한다.
@@ -529,8 +529,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.4a.png" alt="Figure 3.4a" height="200px" />
-  <img src="/Murphy_PML/images/Figure3.4b.png" alt="Figure 3.4b" height="200px" />
+  <img src="/images/Figure3.4a.png" alt="Figure 3.4a" height="200px" />
+  <img src="/images/Figure3.4b.png" alt="Figure 3.4b" height="200px" />
 </div>
 
 <ul>

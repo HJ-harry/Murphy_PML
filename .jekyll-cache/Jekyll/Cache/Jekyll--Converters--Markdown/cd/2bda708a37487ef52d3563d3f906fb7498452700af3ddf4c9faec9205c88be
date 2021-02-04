@@ -1,4 +1,4 @@
-I"R)<ul>
+I")<ul>
   <li>우리는 지금까지 회귀모형을 작성할 때 해당 모델의 형태와 이 때 사용되는 기저함수의 개수가 고정되어 있다고 가정했다.</li>
   <li>그리고 이 문제를 풀기 위해 최소 제곱법을 도입하여 식을 전개했다.</li>
   <li>작은 크기의 샘플 데이터에 대해 복잡한 모델을 사용하는 경우 오버 피팅이 발생하는 현상도 확인했다.
@@ -116,18 +116,18 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.5a.png" alt="Figure 3.5a" height="200px" />
-  <img src="/Murphy_PML/images/Figure3.5b.png" alt="Figure 3.5b" height="200px" />
+  <img src="/images/Figure3.5a.png" alt="Figure 3.5a" height="200px" />
+  <img src="/images/Figure3.5b.png" alt="Figure 3.5b" height="200px" />
 </div>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.5c.png" alt="Figure 3.5c" height="200px" />
-  <img src="/Murphy_PML/images/Figure3.5d.png" alt="Figure 3.5d" height="200px" />
+  <img src="/images/Figure3.5c.png" alt="Figure 3.5c" height="200px" />
+  <img src="/images/Figure3.5d.png" alt="Figure 3.5d" height="200px" />
 </div>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.5e.png" alt="Figure 3.5e" height="200px" />
-  <img src="/Murphy_PML/images/Figure3.5f.png" alt="Figure 3.5f" height="200px" />
+  <img src="/images/Figure3.5e.png" alt="Figure 3.5e" height="200px" />
+  <img src="/images/Figure3.5f.png" alt="Figure 3.5f" height="200px" />
 </div>
 
 <ul>
@@ -177,7 +177,7 @@
   <li>이 식을 도식화한 결과를 보도록 하자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.6.png" alt="figure3.6" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure3.6.png" alt="figure3.6" class="center-block" height="200px" /></p>
 
 <ul>
   <li>결국 분홍색 선이 가장 최소가 되는 지점의 \( \lambda \) 를 고르는 문제가 된다.</li>

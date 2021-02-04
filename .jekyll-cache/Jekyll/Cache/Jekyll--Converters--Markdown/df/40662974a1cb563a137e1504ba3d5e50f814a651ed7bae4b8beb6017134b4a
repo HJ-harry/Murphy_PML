@@ -1,4 +1,4 @@
-I";G<blockquote>
+I"�F<blockquote>
   <p><strong>목표</strong> : 실수 범위의 입력 변수 \( x \) 를 관찰한 후 이 관찰 값을 바탕으로 실수 범위의 타겟(target) \( t \) 의 값을 예측하고 싶다.</p>
 </blockquote>
 
@@ -16,7 +16,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.2.png" alt="figure1.2" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure1.2.png" alt="figure1.2" class="center-block" height="200px" /></p>
 
 <ul>
   <li>그림에서 녹색 선이 \( \sin(2\pi x) \) 함수.</li>
@@ -90,7 +90,7 @@
 
 \[E({\bf w})=\dfrac{1}{2}\sum_{n=1}^{N}\{y(x_n,{\bf w})-t_n\}^2 \qquad{(1.2)}\]
 
-<p><img src="/Murphy_PML/images/Figure1.3.png" alt="figure1.3" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure1.3.png" alt="figure1.3" class="center-block" height="200px" /></p>
 
 <ul>
   <li>이제 우리는 함수 근사 문제를 \( E({\bf w}) \) 값을 최소로 만드는 \( {\bf w} \) 를 구하는 문제로 생각하면 된다.</li>
@@ -133,12 +133,12 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure1.4a.png" alt="Figure 1.4a" height="180px" />
-  <img src="/Murphy_PML/images/Figure1.4b.png" alt="Figure 1.4b" height="180px" />
+  <img src="/images/Figure1.4a.png" alt="Figure 1.4a" height="180px" />
+  <img src="/images/Figure1.4b.png" alt="Figure 1.4b" height="180px" />
 </div>
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure1.4c.png" alt="Figure 1.4c" height="180px" />
-  <img src="/Murphy_PML/images/Figure1.4d.png" alt="Figure 1.4d" height="180px" />
+  <img src="/images/Figure1.4c.png" alt="Figure 1.4c" height="180px" />
+  <img src="/images/Figure1.4d.png" alt="Figure 1.4d" height="180px" />
 </div>
 
 <ul>
@@ -175,7 +175,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.5.png" alt="figure1.5" class="center-block" height="250px" /></p>
+<p><img src="/images/Figure1.5.png" alt="figure1.5" class="center-block" height="250px" /></p>
 
 <ul>
   <li>각각의 \( M \) 에 대해 \( RMS \) 의 값을 확인해보면 학습 데이터와 테스트 데이터의 차이를 쉽게 확인할 수 있다.</li>
@@ -202,8 +202,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure1.6a.png" alt="Figure 1.6a" height="200px" />
-  <img src="/Murphy_PML/images/Figure1.6b.png" alt="Figure 1.6b" height="200px" />
+  <img src="/images/Figure1.6a.png" alt="Figure 1.6a" height="200px" />
+  <img src="/images/Figure1.6b.png" alt="Figure 1.6b" height="200px" />
 </div>
 
 <ul>
@@ -276,8 +276,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure1.7a.png" alt="Figure 1.7a" height="200px" />
-  <img src="/Murphy_PML/images/Figure1.7b.png" alt="Figure 1.7b" height="200px" />
+  <img src="/images/Figure1.7a.png" alt="Figure 1.7a" height="200px" />
+  <img src="/images/Figure1.7b.png" alt="Figure 1.7b" height="200px" />
 </div>
 
 <ul>
@@ -286,7 +286,7 @@
   <li>그러나 \( \ln{\lambda}=0 \) 을 보면 알 수 있듯, 지나치게 큰 \( \lambda \) 값은 다시 언더피팅(under-fitting) 현상을 만들어낸다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.8.png" alt="figure1.8" class="center-block" height="220px" /></p>
+<p><img src="/images/Figure1.8.png" alt="figure1.8" class="center-block" height="220px" /></p>
 
 <ul>
   <li>이제 정칙화 계수를 추가한 상태에서의 \( RMS \) 결과를 다시 한번 살펴보자.</li>

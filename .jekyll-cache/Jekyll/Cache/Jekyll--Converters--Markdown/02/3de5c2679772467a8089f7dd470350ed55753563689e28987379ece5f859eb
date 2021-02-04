@@ -1,4 +1,4 @@
-I"�<ul>
+I"W<ul>
   <li>지금까지 살펴보았던 이항 분포는 2개의 가능한 변수 중 하나를 선택하는 문제였다.</li>
   <li>이제부는 \( K \) 개의 가능성 중 하나를 선택하는 문제를 다루어 볼 것이다.</li>
   <li>문제를 간단하게 하기 위해 \( K \) 차원의 크기를 가지는 입력 변수를 고려해보자.</li>
@@ -112,7 +112,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.4.png" alt="figure2.4" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.4.png" alt="figure2.4" class="center-block" height="200px" /></p>
 
 <ul>
   <li>
@@ -139,9 +139,9 @@
 \[\alpha_0=\sum_{k=1}^{K}\alpha_k \qquad{(2.39)}\]
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.5a.png" alt="Figure 2.5a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.5b.png" alt="Figure 2.5b" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.5c.png" alt="Figure 2.5c" height="180px" />
+  <img src="/images/Figure2.5a.png" alt="Figure 2.5a" height="180px" />
+  <img src="/images/Figure2.5b.png" alt="Figure 2.5b" height="180px" />
+  <img src="/images/Figure2.5c.png" alt="Figure 2.5c" height="180px" />
 </div>
 
 <ul>

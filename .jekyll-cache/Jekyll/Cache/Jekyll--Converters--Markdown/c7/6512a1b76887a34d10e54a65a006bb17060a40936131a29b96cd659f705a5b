@@ -1,4 +1,4 @@
-I"iy<ul>
+I"y<ul>
   <li>2.3 절의 가우시안 분포 내용이 너무 길어서 몇 개의 파트로 나누어 설명한다.</li>
   <li>앞절의 내용은 Part.I 을 참고하기 바란다.</li>
 </ul>
@@ -181,7 +181,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.10.png" alt="figure2.10" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.10.png" alt="figure2.10" class="center-block" height="200px" /></p>
 
 <ul>
   <li>여기서 관찰 데이터는 \( z \) 이다. (파란색 점)</li>
@@ -301,7 +301,7 @@
   <li>정규 분포의 평균 값에 대한 연결선은 직선의 함수가 된다. (붉은색)</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.11.png" alt="figure2.11" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.11.png" alt="figure2.11" class="center-block" height="200px" /></p>
 
 <ul>
   <li>이 때 이 값이 0 을 만족하는 값이 우리가 찾고자 하는 \( \mu_{ML} \) 의 해가 된다.</li>
@@ -416,7 +416,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.12.png" alt="figure2.12" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.12.png" alt="figure2.12" class="center-block" height="200px" /></p>
 
 <ul>
   <li>위의 그림은 실제 가우시안 분포를 따르는 확률 분포에 대한 사후 확률 분포를 도식화한 것이다.</li>
@@ -489,9 +489,9 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.13a.png" alt="Figure 2.13a" height="150px" />
-  <img src="/Murphy_PML/images/Figure2.13b.png" alt="Figure 2.13b" height="150px" />
-  <img src="/Murphy_PML/images/Figure2.13b.png" alt="Figure 2.13c" height="150px" />
+  <img src="/images/Figure2.13a.png" alt="Figure 2.13a" height="150px" />
+  <img src="/images/Figure2.13b.png" alt="Figure 2.13b" height="150px" />
+  <img src="/images/Figure2.13b.png" alt="Figure 2.13c" height="150px" />
 </div>
 
 <ul>
@@ -619,7 +619,7 @@
   <li>이를 도식화하면 다음과 같다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.14.png" alt="figure2.14" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.14.png" alt="figure2.14" class="center-block" height="200px" /></p>
 
 <ul>
   <li>위의 그림은 \( \mu_0=0 \) , \( \beta=2 \) , \( a=5 \) , \( b=6 \)  일 때의 컨투어이다.</li>

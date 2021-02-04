@@ -1,4 +1,4 @@
-I"�o<ul>
+I"Fo<ul>
   <li>2.3 절의 가우시안 분포 내용이 너무 길어서 몇 개의 파트로 나누어 설명한다.</li>
   <li>앞절의 내용은 Part.II 을 참고하기 바란다.</li>
 </ul>
@@ -56,7 +56,7 @@
   <li>이 값에 따라 분포의 양상이 어떻게 달라지는지 확인해보자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.15.png" alt="figure2.15" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.15.png" alt="figure2.15" class="center-block" height="200px" /></p>
 
 <ul>
   <li>\( \mu=0 \) 이고 \( \lambda=1 \) 인 환경에서 \( v \) 값만을 변화시켜 얻은 그래프이다.
@@ -79,8 +79,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.16a.png" alt="Figure 2.16a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.16b.png" alt="Figure 2.16b" height="180px" />
+  <img src="/images/Figure2.16a.png" alt="Figure 2.16a" height="180px" />
+  <img src="/images/Figure2.16b.png" alt="Figure 2.16b" height="180px" />
 </div>
 
 <ul>
@@ -189,7 +189,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.17.png" alt="figure2.17" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.17.png" alt="figure2.17" class="center-block" height="200px" /></p>
 
 <ul>
   <li>위의 그림을 보면 \( {\bf x}_n \) 데이터가 원 위에 위치하는 것을 알 수 있다.</li>
@@ -276,7 +276,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.18.png" alt="figure2.18" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.18.png" alt="figure2.18" class="center-block" height="200px" /></p>
 
 <ul>
   <li>위의 그림에서 파란 색 컨투어는 \( p({\bf x}) \) 를 나타내는 그림이다. ( \( p(\theta) \) 가 아니다.)</li>
@@ -353,7 +353,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   <li>만약 \( m \) 이 충분히 크다면 이 분포는 가우시안 분포에 근접하게 된다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.19a.png" alt="figure2.19a" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.19a.png" alt="figure2.19a" class="center-block" height="200px" /></p>
 
 <ul>
   <li>이 그림은 \( von\;Mises \) 분포를 그린 것이다.
@@ -363,7 +363,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.19b.png" alt="figure2.19b" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.19b.png" alt="figure2.19b" class="center-block" height="200px" /></p>
 
 <ul>
   <li>
@@ -374,7 +374,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.20a.png" alt="figure2.20a" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.20a.png" alt="figure2.20a" class="center-block" height="200px" /></p>
 
 <hr />
 
@@ -445,7 +445,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   <li>이에 대한 그림은 다음과 같다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.20b.png" alt="figure2.20b" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.20b.png" alt="figure2.20b" class="center-block" height="200px" /></p>
 
 <ul>
   <li>간단하게 전개식을 정리해 놓는다. (교재에는 없다)</li>
@@ -507,8 +507,8 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.21a.png" alt="Figure 2.21a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.21b.png" alt="Figure 2.21b" height="180px" />
+  <img src="/images/Figure2.21a.png" alt="Figure 2.21a" height="180px" />
+  <img src="/images/Figure2.21b.png" alt="Figure 2.21b" height="180px" />
 </div>
 
 <ul>
@@ -534,7 +534,7 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
   <li>이러한 문제를 해결하기 위해 이제부터 혼합 가우시안 모델 (Mixture Gaussian distribution) 을 제시한다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.22.png" alt="figure2.22" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.22.png" alt="figure2.22" class="center-block" height="200px" /></p>
 
 <ul>
   <li>가우시안 선형 결합은 매우 복잡한 밀도를 표현할 수 있음
@@ -556,9 +556,9 @@ mode[{\bf x}]={\bf \mu} &amp; &amp;  \qquad{(2.166)}
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.23a.png" alt="Figure 2.23a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.23b.png" alt="Figure 2.23b" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.23c.png" alt="Figure 2.23c" height="180px" />
+  <img src="/images/Figure2.23a.png" alt="Figure 2.23a" height="180px" />
+  <img src="/images/Figure2.23b.png" alt="Figure 2.23b" height="180px" />
+  <img src="/images/Figure2.23c.png" alt="Figure 2.23c" height="180px" />
 </div>
 
 <ul>

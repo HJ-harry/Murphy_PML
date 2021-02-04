@@ -1,4 +1,4 @@
-I"X�<ul>
+I"ԙ<ul>
   <li>패턴 인식 분야에 있어 불확실성(<em>uncertainty</em>)은 가장 중요한 개념 중 하나.</li>
   <li>이번 장에서 간단하게 확률 이론을 살펴본 뒤에 이를 결정 이론(<em>decision theory</em>)과 엮는 과정을 살펴볼 것이다.</li>
   <li>불확실성(<em>uncertainty</em>)이 발생하는 이유
@@ -20,7 +20,7 @@
   <li>간단한 예제를 통해 우선 확률 이론에 대해 살펴보도록 하자. (사과와 오렌지 예제)</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.9.png" alt="figure1.9" class="center-block" height="150px" /></p>
+<p><img src="/images/Figure1.9.png" alt="figure1.9" class="center-block" height="150px" /></p>
 
 <ul>
   <li>주어진 환경
@@ -61,7 +61,7 @@
   <li>간단하게 이와 관련된 수식을 정리해본다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.10.png" alt="figure1.10" class="center-block" height="170px" /></p>
+<p><img src="/images/Figure1.10.png" alt="figure1.10" class="center-block" height="170px" /></p>
 
 \[p(X=x_i, Y=y_j)=\dfrac{n_{ij}}{N} \qquad{(1.5)}\]
 
@@ -127,12 +127,12 @@
 \[p(F=o|B=b)=1/4 \qquad{(1.19)}\]
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure1.11a.png" alt="Figure 1.11a" height="180px" />
-  <img src="/Murphy_PML/images/Figure1.11b.png" alt="Figure 1.11b" height="180px" />
+  <img src="/images/Figure1.11a.png" alt="Figure 1.11a" height="180px" />
+  <img src="/images/Figure1.11b.png" alt="Figure 1.11b" height="180px" />
 </div>
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure1.11c.png" alt="Figure 1.11c" height="180px" />
-  <img src="/Murphy_PML/images/Figure1.11d.png" alt="Figure 1.11d" height="180px" />
+  <img src="/images/Figure1.11c.png" alt="Figure 1.11c" height="180px" />
+  <img src="/images/Figure1.11d.png" alt="Figure 1.11d" height="180px" />
 </div>
 
 <h2 id="121-확률-밀도-probabilty-densities">1.2.1. 확률 밀도 (Probabilty densities)</h2>
@@ -152,7 +152,7 @@
 
 \[p(x \in (a, b)) = \int_{a}^{b}p(x)dx \qquad{(1.24)}\]
 
-<p><img src="/Murphy_PML/images/Figure1.12.png" alt="figure1.12" class="center-block" height="180px" /></p>
+<p><img src="/images/Figure1.12.png" alt="figure1.12" class="center-block" height="180px" /></p>
 
 <ul>
   <li>여기서 \( P(x) \) 는 확률의 누적식(즉, <em>CDF</em>)이 되고 \( p(x) \) 는 확률 밀도(probability density)가 된다.</li>
@@ -461,7 +461,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.13.png" alt="figure1.13" class="center-block" height="220px" /></p>
+<p><img src="/images/Figure1.13.png" alt="figure1.13" class="center-block" height="220px" /></p>
 
 <ul>
   <li>가우시안 분포를 정규 분포라고 부른다. 이 분포는 다음과 같은 성질이 있다.</li>
@@ -511,7 +511,7 @@
   <li>이것을 그림으로 나타내면 다음과 같다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.14.png" alt="figure1.14" class="center-block" height="220px" /></p>
+<p><img src="/images/Figure1.14.png" alt="figure1.14" class="center-block" height="220px" /></p>
 
 <ul>
   <li>그럼 어떤 관찰 데이터가 하나의 가우시안 분포를 따른다고 생각해보자.</li>
@@ -576,7 +576,7 @@
 
 \[\tilde{\sigma}^2=\dfrac{N}{N-1}\sigma_{ML}^2=\dfrac{1}{N-1}\sum_{n=1}^{N}(x_n-\mu_{ML})^2 \qquad{(1.59)}\]
 
-<p><img src="/Murphy_PML/images/Figure1.15.png" alt="figure1.15" class="center-block" height="220px" /></p>
+<p><img src="/images/Figure1.15.png" alt="figure1.15" class="center-block" height="220px" /></p>
 
 <ul>
   <li>위의 그림은 파라미터의 bias, unbias 개념을 이해하고자 제시된 그림이다.</li>
@@ -601,7 +601,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.16.png" alt="figure1.16" class="center-block" height="250px" /></p>
+<p><img src="/images/Figure1.16.png" alt="figure1.16" class="center-block" height="250px" /></p>
 
 <ul>
   <li>커브 피팅 문제의 최종 목표는 임의로 제공된 \( x \) 에 대해 이 때의 \( t \) 값을 예측하여 제공하는 것이다.</li>
@@ -789,7 +789,7 @@
   <li>이런 식을 통해 sinusoidal 예제를 어떻게 해결하는지 간단하게 그림으로 확인해보자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.17.png" alt="figure1.17" class="center-block" height="230px" /></p>
+<p><img src="/images/Figure1.17.png" alt="figure1.17" class="center-block" height="230px" /></p>
 
 <ul>
   <li>이 그림은 기저함수를 다항식(polynomial)으로 선택하여 만든 모델로, \( M=9 \) 이고 \( \alpha \) 는 0.005, \( \beta \) 는 11.1 이 사용되었다.</li>

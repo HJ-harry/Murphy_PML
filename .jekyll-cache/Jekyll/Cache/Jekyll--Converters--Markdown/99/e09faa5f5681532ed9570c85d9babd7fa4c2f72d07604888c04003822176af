@@ -1,4 +1,4 @@
-I".
+I"#
 <ul>
   <li>패턴인식은 컴퓨터를 이용하여 데이터에 내재하는 패턴을 자동으로 추출하는 것을 의미한다.</li>
   <li>이렇게 발견된 패턴들을 이용해 분류(classification), 회귀(regression) 등의 구체적인 작업을 수행할 수 있다.</li>
@@ -11,7 +11,7 @@
   <li>아래 그림은 필기체 학습을 위한 테스트 데이터 예제.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.1.png" alt="figure1.1" class="center-block" height="120px" /></p>
+<p><img src="/images/Figure1.1.png" alt="figure1.1" class="center-block" height="120px" /></p>
 
 <ul>
   <li>이후에 여러가지 알고리즘을 통해 위의 그림을 분류해내는 기법들을 살펴보게 될 것이다.</li>

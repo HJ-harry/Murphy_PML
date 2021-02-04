@@ -1,4 +1,4 @@
-I"8<ul>
+I"�7<ul>
   <li>1장에서 오버-피팅(over-fitting)을 막을 수 있는 방안으로 Cross-Validation 기법이나 정칙화 파라미터를 사용하는 방법들을 설명했다.</li>
   <li>이번 절에서는 베이지안 관점에서의 모델 선택 문제를 다루어보고자 한다.
     <ul>
@@ -115,7 +115,7 @@
 
 \[\ln p(D) \simeq \ln p(D|w_{MAP}) + \ln \left( \frac{\Delta w_{posterior}}{\Delta w_{prior}} \right) \qquad{(3.71)}\]
 
-<p><img src="/Murphy_PML/images/Figure3.12.png" alt="figure3.12" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure3.12.png" alt="figure3.12" class="center-block" height="200px" /></p>
 
 <ul>
   <li>위 그림은 \( w \) 의 사후 분포가 한 점에서 높은 피크를 그릴 때의 모습을 대략적으로 나타낸 것이다.</li>
@@ -192,7 +192,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.13.png" alt="figure3.13" class="center-block" height="150px" /></p>
+<p><img src="/images/Figure3.13.png" alt="figure3.13" class="center-block" height="150px" /></p>
 
 <ul>
   <li>그림을 보면 \( M_1 \) 이 가장 단순한 모델이고, \( M_3 \) 가 가장 복합한 모델임을 알 수 있다.

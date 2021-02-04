@@ -1,4 +1,4 @@
-I"�X<ul>
+I"�X<ul>
   <li>우선 가장 간단한 형태의 식으로 부터 논의를 시작한다.</li>
   <li>랜덤 변수 \( x \) 가 \( x \in \{ 0,1 \} \) 인 상황(즉, 취할 수 있는 값이 단 2개)에서의 확률 분포를 살펴본다.</li>
   <li>가장 간단한 경우가 바로 동전 던지기 예제인데, 동전을 던저 앞면이 나오면 \( x=1 \) , 뒷면이 나오면 \( x=0 \) 이다.</li>
@@ -85,7 +85,7 @@
   <li>\( N=10 \) 이고 \( \mu=0.25 \) 일 때의 결과를 살펴보자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.1.png" alt="figure2.1" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.1.png" alt="figure2.1" class="center-block" height="200px" /></p>
 
 <ul>
   <li>특별히 어려운 부분은 없다.</li>
@@ -195,12 +195,12 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.2a.png" alt="Figure 2.2a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.2b.png" alt="Figure 2.2b" height="180px" />
+  <img src="/images/Figure2.2a.png" alt="Figure 2.2a" height="180px" />
+  <img src="/images/Figure2.2b.png" alt="Figure 2.2b" height="180px" />
 </div>
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.2c.png" alt="Figure 2.2c" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.2d.png" alt="Figure 2.2d" height="180px" />
+  <img src="/images/Figure2.2c.png" alt="Figure 2.2c" height="180px" />
+  <img src="/images/Figure2.2d.png" alt="Figure 2.2d" height="180px" />
 </div>
 
 <ul>
@@ -243,9 +243,9 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.3a.png" alt="Figure 2.3a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.3b.png" alt="Figure 2.3b" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.3c.png" alt="Figure 2.3c" height="180px" />
+  <img src="/images/Figure2.3a.png" alt="Figure 2.3a" height="180px" />
+  <img src="/images/Figure2.3b.png" alt="Figure 2.3b" height="180px" />
+  <img src="/images/Figure2.3c.png" alt="Figure 2.3c" height="180px" />
 </div>
 
 <ul>

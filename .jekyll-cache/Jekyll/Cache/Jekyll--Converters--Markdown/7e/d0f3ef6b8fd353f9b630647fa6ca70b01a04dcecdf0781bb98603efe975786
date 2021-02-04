@@ -1,4 +1,4 @@
-I"�J<ul>
+I"/J<ul>
   <li>지금까지 <em>MLE</em>를 이용하여 선형 회귀 문제를 해결하는 방법을 살펴보았다.</li>
   <li>또한 기저함수의 개수를 조절하여 가장 효율적인 모델 복잡도에 대해서도 살펴보았다.</li>
   <li>또한 정칙화 요소의 의미와 정칙화 계수를 조절하여 모델의 복잡도를 조절하는 방법도 배웠다.</li>
@@ -103,7 +103,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.7.png" alt="figure3.7" class="center-block" height="600px" /></p>
+<p><img src="/images/Figure3.7.png" alt="figure3.7" class="center-block" height="600px" /></p>
 
 <ul>
   <li>위의 그림은 순차적인 베이지안 사후 분포 적용을 그림으로 나타낸 것이다.
@@ -230,12 +230,12 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.8a.png" alt="Figure 3.8a" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.8b.png" alt="Figure 3.8b" height="180px" />
+  <img src="/images/Figure3.8a.png" alt="Figure 3.8a" height="180px" />
+  <img src="/images/Figure3.8b.png" alt="Figure 3.8b" height="180px" />
 </div>
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.8c.png" alt="Figure 3.8c" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.8d.png" alt="Figure 3.8d" height="180px" />
+  <img src="/images/Figure3.8c.png" alt="Figure 3.8c" height="180px" />
+  <img src="/images/Figure3.8d.png" alt="Figure 3.8d" height="180px" />
 </div>
 
 <ul>
@@ -246,12 +246,12 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.9a.png" alt="Figure 3.9a" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.9b.png" alt="Figure 3.9b" height="180px" />
+  <img src="/images/Figure3.9a.png" alt="Figure 3.9a" height="180px" />
+  <img src="/images/Figure3.9b.png" alt="Figure 3.9b" height="180px" />
 </div>
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.9c.png" alt="Figure 3.9c" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.9d.png" alt="Figure 3.9d" height="180px" />
+  <img src="/images/Figure3.9c.png" alt="Figure 3.9c" height="180px" />
+  <img src="/images/Figure3.9d.png" alt="Figure 3.9d" height="180px" />
 </div>
 
 <ul>
@@ -297,7 +297,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.10.png" alt="figure3.10" class="center-block" height="150px" /></p>
+<p><img src="/images/Figure3.10.png" alt="figure3.10" class="center-block" height="150px" /></p>
 
 <ul>
   <li>위의 그림은 3개의 위치에서 각각의 커널 함수의 모양을 살펴보는 그림이다.</li>
@@ -306,8 +306,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.11a.png" alt="Figure 3.11a" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.11b.png" alt="Figure 3.11b" height="180px" />
+  <img src="/images/Figure3.11a.png" alt="Figure 3.11a" height="180px" />
+  <img src="/images/Figure3.11b.png" alt="Figure 3.11b" height="180px" />
 </div>
 
 <ul>

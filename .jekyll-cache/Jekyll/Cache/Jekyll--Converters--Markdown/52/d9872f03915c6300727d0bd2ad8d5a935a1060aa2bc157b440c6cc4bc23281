@@ -1,4 +1,4 @@
-I"�G<ul>
+I"�G<ul>
   <li>완전한 ( <em>full</em> ) 베이지언 패러다임의 선형 기저 함수 모델에서는 초모수 \( \alpha \) , \( \beta \) 가 사용된다.
     <ul>
       <li>여기서 \( \alpha \) 는 파라미터 \( {\bf w} \) 에 대한 분산을, \( \beta \) 는 \( {\bf t} \) 에 대한 분산을 의미한다.</li>
@@ -164,7 +164,7 @@
   <li>이 값을 이용하여 적절한 \( M \) 값을 찾는 방법을 살펴보자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.14.png" alt="figure3.14" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure3.14.png" alt="figure3.14" class="center-block" height="200px" /></p>
 
 <ul>
   <li>위의 그림은 polynomial regression 문제를 위의 식을 통해 구한 결과이다.</li>
@@ -271,7 +271,7 @@
   <li>아래 그림을 보자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.15.png" alt="figure3.15" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure3.15.png" alt="figure3.15" class="center-block" height="200px" /></p>
 
 <ul>
   <li>붉은 색의 컨투어는 가능도 함수를 의미한다.
@@ -342,8 +342,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure3.16a.png" alt="Figure 3.16a" height="180px" />
-  <img src="/Murphy_PML/images/Figure3.16b.png" alt="Figure 3.16b" height="180px" />
+  <img src="/images/Figure3.16a.png" alt="Figure 3.16a" height="180px" />
+  <img src="/images/Figure3.16b.png" alt="Figure 3.16b" height="180px" />
 </div>
 
 <ul>
@@ -367,7 +367,7 @@
   <li>마지막으로 \( \alpha \) 값이 어떻게 \( w_i \) 값을 조절하게 되는지 그림으로 확인해보자.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure3.17.png" alt="figure3.17" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure3.17.png" alt="figure3.17" class="center-block" height="200px" /></p>
 
 <ul>
   <li>총 10개의 파라미터가 있다. (가우시안 기저 함수에 대한 계수)</li>

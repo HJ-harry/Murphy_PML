@@ -1,4 +1,4 @@
-I"~<ul>
+I"s<ul>
   <li>지금까지 최소 제곱법(Least square)을 이용한 다항식 커브 피팅의 예를 살펴보았다.</li>
   <li>또한 다항식에서 최적의 차수(order)를 구해 강건한 모델을 만드는 것도 살펴보았다.</li>
   <li>정칙화 계수(regularization coefficient) \( \lambda \) 를 조절하여 모델의 복잡도를 조절할 수 있다는 것을 확인했다.</li>
@@ -37,7 +37,7 @@
   </li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure1.18.png" alt="figure1.18" class="center-block" height="190px" /></p>
+<p><img src="/images/Figure1.18.png" alt="figure1.18" class="center-block" height="190px" /></p>
 
 <ul>
   <li>전통적인 <strong>정보 이론</strong> (infomation criteria) 영역에서는 <em>MLE</em> 로 인해 발생되는 bias를 막기 위해 페널티 조건을 추가하는 방식을 사용한다.</li>

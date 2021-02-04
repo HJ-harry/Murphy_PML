@@ -1,4 +1,4 @@
-I"b�<ul>
+I"��<ul>
   <li>가우시안 분포는 보통 정규분포(standard distribution)로 알려져있다.</li>
   <li>왜냐하면 연속 확률 분포 중 가장 널리 알려진 분포이기 때문이다.</li>
   <li>단일 변수 \( x \) 에 대해 가우시안 분포는 다음과 같이 기술된다.</li>
@@ -33,9 +33,9 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.6a.png" alt="Figure 2.6a" height="150px" />
-  <img src="/Murphy_PML/images/Figure2.6b.png" alt="Figure 2.6b" height="150px" />
-  <img src="/Murphy_PML/images/Figure2.6c.png" alt="Figure 2.6c" height="150px" />
+  <img src="/images/Figure2.6a.png" alt="Figure 2.6a" height="150px" />
+  <img src="/images/Figure2.6b.png" alt="Figure 2.6b" height="150px" />
+  <img src="/images/Figure2.6c.png" alt="Figure 2.6c" height="150px" />
 </div>
 
 <ul>
@@ -156,7 +156,7 @@
   <li>사실 이러한 변환을 주축 변환이라고 한다. 선형대수 교재에 많이 나온다.</li>
 </ul>
 
-<p><img src="/Murphy_PML/images/Figure2.7.png" alt="figure2.7" class="center-block" height="200px" /></p>
+<p><img src="/images/Figure2.7.png" alt="figure2.7" class="center-block" height="200px" /></p>
 
 <ul>
   <li>그림 설명
@@ -352,9 +352,9 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.8a.png" alt="Figure 2.8a" height="150px" />
-  <img src="/Murphy_PML/images/Figure2.8b.png" alt="Figure 2.8b" height="150px" />
-  <img src="/Murphy_PML/images/Figure2.8c.png" alt="Figure 2.8c" height="150px" />
+  <img src="/images/Figure2.8a.png" alt="Figure 2.8a" height="150px" />
+  <img src="/images/Figure2.8b.png" alt="Figure 2.8b" height="150px" />
+  <img src="/images/Figure2.8c.png" alt="Figure 2.8c" height="150px" />
 </div>
 
 <ul>
@@ -792,8 +792,8 @@
 </ul>
 
 <div class="text-center">
-  <img src="/Murphy_PML/images/Figure2.9a.png" alt="Figure 2.9a" height="180px" />
-  <img src="/Murphy_PML/images/Figure2.9b.png" alt="Figure 2.9b" height="180px" />
+  <img src="/images/Figure2.9a.png" alt="Figure 2.9a" height="180px" />
+  <img src="/images/Figure2.9b.png" alt="Figure 2.9b" height="180px" />
 </div>
 
 <ul>
