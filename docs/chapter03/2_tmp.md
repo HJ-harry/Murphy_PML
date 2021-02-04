@@ -2,6 +2,7 @@
 layout: page-sidenav
 group: "Chapter. 3"
 title: "3. Univariate Gaussian (normal) distribution"
+author: Hyungjin Chung
 ---
 
 -본 단원에서는 **Gaussian distribution(normal distribution)**을 다룬다.

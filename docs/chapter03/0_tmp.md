@@ -2,6 +2,7 @@
 layout: page-sidenav
 group: "Chapter. 3"
 title: "1. Bernoulli and binomial distributions"
+author: Hyungjin Chung
 ---
 
 - 가장 간단한 probability distribution으로 **Bernoulli distribution**을 들 수 있다.

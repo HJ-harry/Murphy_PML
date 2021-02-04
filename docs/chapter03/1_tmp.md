@@ -2,6 +2,7 @@
 layout: page-sidenav
 group: "Chapter. 3"
 title: "2. Categorical and multinomial distributions"
+author: Hyungjin Chung
 ---
 
 - 지난 단원에 이어서 label이 binary가 아닌 finite set일 때를 다룬다. 다시 말해, \\( y \in \{1, \dots, C\} \\) 인 경우이다.
