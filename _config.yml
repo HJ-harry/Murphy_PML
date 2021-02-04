@@ -7,7 +7,7 @@ github_url: "http://github.com/hj-harry"
 github_editurl: "/blob/gh-pages"
 github_profile: "http://github.com/hj-harry"
 baseurl: "/Murphy_PML"
-disqus_shortname: hj-harry
+disqus_shortname: HJ-blog
 
 exclude:
   - README.md
