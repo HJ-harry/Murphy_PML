@@ -10,6 +10,7 @@ author: Hyungjin Chung
   - Bayesian: Inference를 진행할 때 확실성을 측량하는 과정에서 **Bayes' rule**을 이용하는 방식
 - 직역하자면 다소 모호하지만 오히려 뒤 예시를 보는 편이 더 직관적이다.
 - Bayes' rule은 관측된 데이터 \\( Y = y \\)를 기반으로 우리가 알고싶은 값 \\( H \\)에 대한 probability distribution을 나타내게 해준다.
+- Bayes' rule은 관측된 데이터 $Y = y$를 기반으로 우리가 알고싶은 값 $H$에 대한 probability distribution을 나타내게 해준다.
 
 $$p(H = h|Y = y) \frac{p(H = h)p(Y = y|H = h)}{p(Y = y)} \qquad{(2.1)}$$
 
