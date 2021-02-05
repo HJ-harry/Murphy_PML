@@ -24,7 +24,7 @@ $$p(h|y)p(y) = p(h)p(y|h) = p(h,y) \qquad{(2.2)}$$
 - 모든 \\( h \\)값에 대해서 marginalize out 해주기 때문
 - 결국 이 모든 것을 고려하면 **posterior distribution** \\( p(H = h|Y = y) \\)를 얻게 된다. 이는 새롭게 observe한 데이터 \\( y \\)를 기반으로 새롭게 업데이트 된 \\( H \\)에 대한 새로운 **belief state**이다.
 
-$$\textrm{posterior} \propto \textrm{prior} \times \textrm{likelihood} \\qquad{(2.4)}$$
+$$\textrm{posterior} \propto \textrm{prior} \times \textrm{likelihood} \qquad{(2.4)}$$
 
 - summarize하자면 식 (2.4)라고 할 수 있다.
 - 이와 같이 Bayes rule을 이용해 unknown value에 대한 belief state를 새롭게 observe된 데이터에 근거하여 업데이트하는 방식을 **Bayesian inference** 또는 **posterior inference**라고 한다.
@@ -39,6 +39,8 @@ $$\textrm{posterior} \propto \textrm{prior} \times \textrm{likelihood} \\qquad{(
 
 |       | Y = 0       | Y = 1       |
 |-------|-------------|-------------|
-| H = 0 | TNR = 0.975 | FPR = ?     |
-| H = 1 | FNR = ?     | TPR = 0.875 |
+| H = 0 | TNR = 0.975 | FPR = 0.025 |
+| H = 1 | FNR = 0.125 | TPR = 0.875 |
+
+
 
