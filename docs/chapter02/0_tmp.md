@@ -37,12 +37,8 @@ $$\textrm{posterior} \propto \textrm{prior} \times \textrm{likelihood} \\qquad{(
 - 결국 우리가 원하는 것은 테스트 결과에 따라 **실제로** 코로나에 걸릴 확률이 얼마나 되는지, 그에 대한 posterior distribution \\( p(H = h|Y = y) \\)이다.
 - 검사가 얼마나 정확한지는 아래 table을 통해 정리할 수 있다.
 
-$$
-\begin{tabular}{c|cc}
- & Y = 0 & Y = 1 \\
- \hline
- H = 0 & \textrm{TNR} = 0.975 & \textrm{FPR} = ? \\
- H = 1 & \textrm{FNR} = ? & \textrm{TPR} = 0.875
-\end{tabular}
-$$
+|       | Y = 0       | Y = 1       |
+|-------|-------------|-------------|
+| H = 0 | TNR = 0.975 | FPR = ?     |
+| H = 1 | FNR = ?     | TPR = 0.875 |
 
