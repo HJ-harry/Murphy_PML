@@ -22,7 +22,7 @@ $$p(h|y)p(y) = p(h)p(y|h) = p(h,y) \qquad{(2.2)}$$
 - likelihood function은 \\( h \\)에 대한 함수이고, probability distribution이기에 적분값이 1일 필요는 없다.
 - 이를 normalize해주기 위해서 \\( p(Y = y) \\)가 분모항에 들어가고, 이를 **marginal likelihood**라고 한다.
 - 모든 \\( h \\)값에 대해서 marginalize out 해주기 때문
-- 결국 이 모든 것을 고려하면 **posterior distribution**인 \\( p(H = h \textpipe Y = y) \\)를 얻게 된다. 이는 새롭게 observe한 데이터 \\( y \\)를 기반으로 새롭게 업데이트 된 \\( H \\)에 대한 새로운 **belief state**이다.
+- 결국 이 모든 것을 고려하면 **posterior distribution**인 \\( p(H = h | Y = y) \\)를 얻게 된다. 이는 새롭게 observe한 데이터 \\( y \\)를 기반으로 새롭게 업데이트 된 \\( H \\)에 대한 새로운 **belief state**이다.
 
 $$\textrm{posterior} \propto \textrm{prior} \times \textrm{likelihood} \qquad{(2.4)}$$
 
