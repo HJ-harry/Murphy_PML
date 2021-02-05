@@ -10,7 +10,6 @@ author: Hyungjin Chung
   - Bayesian: Inference를 진행할 때 확실성을 측량하는 과정에서 **Bayes' rule**을 이용하는 방식
 - 직역하자면 다소 모호하지만 오히려 뒤 예시를 보는 편이 더 직관적이다.
 - Bayes' rule은 관측된 데이터 \\( Y = y \\)를 기반으로 우리가 알고싶은 값 \\( H \\)에 대한 probability distribution을 나타내게 해준다.
-- Bayes' rule은 관측된 데이터 $$$Y = y$$$를 기반으로 우리가 알고싶은 값 $$$H$$$에 대한 probability distribution을 나타내게 해준다.
 
 $$p(H = h|Y = y) \frac{p(H = h)p(Y = y|H = h)}{p(Y = y)} \qquad{(2.1)}$$
 
@@ -18,7 +17,7 @@ $$p(h|y)p(y) = p(h)p(y|h) = p(h,y) \qquad{(2.2)}$$
 
 - 식 (2.1)은 (2.2)로부터 도출되며, 식 (2.2)는 **product rule of probability**이다.
 - probability distribution을 도출하고자 하는 대상이 \\( H \\) 이며, 따라서 아무 데이터에도 conditional하지 않은 식 (2.1)의 \\( p(H) \\) 는 \\( H \\) 에 대한 **prior**이다.
-- 여기서 \\( p(Y|H = h) \\) 는 \\( H = h \\) 인 경우 \\( Y \\) 가 가질 수 있는 값들에 대한 distribution을 의미하며, 이를 **observation distribution** 이라고 한다.
+- $$p(Y|H = h)$$ 는 \\( H = h \\) 인 경우 \\( Y \\) 가 가질 수 있는 값들에 대한 distribution을 의미하며, 이를 **observation distribution** 이라고 한다.
 - 위 식을 \\( Y = y \\) 일 때 각각 evaluation할 수 있고, 이 경우에 나오는 \\( p(Y = y|H = h) \\)를 **likelihood**라고 한다.
 - likelihood function은 \\( h \\)에 대한 함수이고, probability distribution이기에 적분값이 1일 필요는 없다.
 - 이를 normalize해주기 위해서 \\( p(Y = y) \\)가 분모항에 들어가고, 이를 **marginal likelihood**라고 한다.
