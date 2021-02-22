@@ -1,4 +1,4 @@
-I"B<p>-본 단원에서는 <strong>Gaussian distribution(normal distribution)</strong>을 다룬다.</p>
+I";<p>-본 단원에서는 <strong>Gaussian distribution(normal distribution)</strong>을 다룬다.</p>
 
 <h3 id="1-cumulative-distribution-function">1. Cumulative distribution function</h3>
 
@@ -88,7 +88,7 @@
 \[p(y|\mathbf{x};\mathbf{\theta}) = \mathcal{N}(y|f_\mu(\mathbf{x};\mathbf{\theta}), f_\sigma(\mathbf{x};\mathbf{\theta})^2) \qquad{(3.54)}\]
 
 <ul>
-  <li>식 (3.54)는 가장 일반적인 경우로, \( f_\mu, f_\sigma \) 가 각각 mean과 variance를 estimate한다.</li>
+  <li>식 (3.54)는 가장 일반적인 경우로, \( f_\mu, f_\sigma \) 가 mean과 variance를 estimate한다.</li>
   <li><strong>Homoscedastic regression</strong>
     <ul>
       <li>Variance는 fix해두고 mean만 conditional하게 알고 싶은 경우
