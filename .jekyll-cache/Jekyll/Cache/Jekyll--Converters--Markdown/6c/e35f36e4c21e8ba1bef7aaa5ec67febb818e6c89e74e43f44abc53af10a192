@@ -1,4 +1,4 @@
-I"�I<ul>
+I"cH<ul>
   <li>지난 섹션에서는 hidden quantity \( h \in \mathcal{H} \) 를 단 하나의 observation \( y \) 로부터 유추하는 방법을 배웠다.</li>
   <li>이를 일반화하면 observation이 하나가 아닌 여러 개로 이루어진 <em>set</em> 일 때를 생각할 수 있다. \( \mathcal{D} = { y_n : n = 1:N } \)</li>
   <li>이제 목표는 주어진 데이터로부터 보편적인 특성(<strong>concept</strong>)을 찾는 일이다.</li>
@@ -29,7 +29,7 @@
       <li>짝수, 1과 10 사이의 모든 수 와 같은 것이 하나의 <em>concept</em>에 해당한다.</li>
     </ul>
   </li>
-  <li>그 후, hypothesis space \( mathcal{H} \) 에 존재하는 concept 중 observed data \( \mathcal{D} \)와 consistent하면서, 가장 크기가 작은 subset을 찾는다. 이를 <strong>version space</strong>
+  <li>그 후, hypothesis space \( \mathcal{H} \) 에 존재하는 concept 중 observed data \( \mathcal{D} \)와 consistent하면서, 가장 크기가 작은 subset을 찾는다. 이를 <strong>version space</strong>
 라고 칭한다.</li>
   <li>그러나, version space theory를 이용해도 사람의 행동을 완전히 설명하기는 어렵다. 모든 짝수, 32를 제외한 모든 2의 승수 등의 subset도 모두 observation과 consistent하지만 사람들은능하다.
 그러한 concept을 잘 제시하지 않는다. 이러한 현상 또한 bayesian inference로 설명이 가능하다.</li>
@@ -72,14 +72,14 @@
       </li>
       <li>Interval hypothesis
         <ul>
-          <li>\(a \) 이상 \(b) \) 이하와 같이 특정 interval에도 어느정도의 prior value를 준다.</li>
+          <li>\(a \) 이상 \( b \) 이하와 같이 특정 interval에도 어느정도의 prior value를 준다.</li>
         </ul>
       </li>
     </ol>
   </li>
 </ul>
 
-\[p(h) = \pi \textrm{Unif}(h|\textrm{rules}) + (1 - \pi)\textrm{Unif}(h|\textrm{intervals}) \\qquad{(2.17)}\]
+\[p(h) = \pi \textrm{Unif}(h|\textrm{rules}) + (1 - \pi)\textrm{Unif}(h|\textrm{intervals}) \qquad{(2.17)}\]
 
 <p>-합쳐서, 위와같은 <strong>mixture distribution</strong>을 정의할 수 있다.</p>
 
@@ -92,7 +92,7 @@
   <img src="/Murphy_PML/images/2.4.PNG" alt="Figure 2.4" height="300px" />
 </div>
 <ul>
-  <li>(a)는 \( \mathcal{D} = {16} \) 일 때의 prior/likelihood/posterior 값이고, (b)는 \( \mathcal{D} = {2, 8, 16, 64} \) 가 주어진 이후의 counterpart이다.
+  <li>(a)는 \( \mathcal{D} = {16} \) 일 때의 prior/likelihood/posterior 값이고, (b)는 \( \mathcal{D} = { 2, 8, 16, 64 } \) 가 주어진 이후의 counterpart이다.
     <ul>
       <li>prior가 hypothesis space를 많이 줄여주기는 하지만, (a)에서는 그래도 posterior에 다양한 hypothesis가 가능한 반면, (b)에서는 아주 작은 hypothesis space만이 남는다.</li>
       <li>중요하게 확인할 수 있는 것은, “32를 제외한 2의 승수”와 같이 직관적으로 improable한 hypothesis들은 높은 likelihood값을 가지지만, <strong>prior 값이 작기</strong> 때문에 <strong>작은 posterior</strong> 값을 갖는다.</li>
@@ -106,8 +106,12 @@
 <ul>
   <li>hypothesis에 대한 posterior는 우리의 <strong>belief state</strong>를 대변한다.</li>
   <li>이러한 internal belief state를 시험할 수 있는 방법은 실측 가능한 값을 예측하는 것이다. (이는 scientific method의 근본이 된다.)</li>
-  <li>Posterior distribution을 가능한 hypothesis에 대해 marginalizing하는 방식으로 가능하며, 이를 <strong>posterior predictive distribution</strong>이라 칭한다.
-\(p(y|\mathcal{D}) = \sum_h p(y|h)p(h|\mathcal{D}) \qquad{(2.18)}\)</li>
+  <li>Posterior distribution을 가능한 hypothesis에 대해 marginalizing하는 방식으로 가능하며, 이를 <strong>posterior predictive distribution</strong>이라 칭한다.</li>
+</ul>
+
+\[p(y|\mathcal{D}) = \sum_h p(y|h)p(h|\mathcal{D}) \qquad{(2.18)}\]
+
+<ul>
   <li>위와 같은 방식으로 posterior predictive distribution을 구하는 방법을 <strong>Bayse model averaging</strong>이라고 한다.</li>
 </ul>
 <div class="text-center">
@@ -127,21 +131,16 @@
 
 <ul>
   <li>Figure 2.4에서 볼 수 있듯이, 데이터가 많아질수록 posterior는 한 값으로 수렴하게 되고, 이를 <strong>posterior mode</strong>라고 한다.
-\(h_{\textrm{map}} := arg\,max_h p(h|\mathcal{D}) \qquad{(2.19)}\)</li>
+\(h_{\textrm{map}} := \textrm{argmax}_h p(h|\mathcal{D}) \qquad{(2.19)}\)</li>
   <li>posterior mode는 maximum posterior probability를 갖는 hypothesis로 정의되며 표현하자면 위와 같다.</li>
   <li>이를 <strong>maximum a posterior (MAP)</strong> 라고 한다.</li>
-  <li>MAP를 optimization을 통해 구할 때, 로그를 취해도 같은 값이 얻어지기 때문에 보통 log posterior를 maximize한다.
-\(h_{\textrm{map}} = arg\,max_h \log p(h|\mathcal{D}) = arg\,max_h \log p(\mathcal{D}|h) + \log p(h) \qquad{(2.20)}\)</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>\( \log p(\mathcal{D}</td>
-          <td>h) \)는 <strong>log likelihood</strong> 이며, \( \log p(h) \)는 <strong>log prior</strong>이다.</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>MAP를 optimization을 통해 구할 때, 로그를 취해도 같은 값이 얻어지기 때문에 보통 log posterior를 maximize한다.</li>
+</ul>
+
+\[h_{\textrm{map}} = \textrm{argmax}_h \log p(h|\mathcal{D}) = \textrm{argmax}_h \log p(\mathcal{D}|h) + \log p(h) \qquad{(2.20)}\]
+
+<ul>
+  <li>\( \log p(\mathcal{D}|h) \)는 <strong>log likelihood</strong> 이며, \( \log p(h) \)는 <strong>log prior</strong>이다.</li>
   <li>데이터가 independent하다는 가정하에, log likelihood term은 각 데이터에 대한 sum으로 표현될 수 있고, 따라서 <strong>데이터가 많을수록 log likelihood의 값이 dominant해진다</strong>.
     <ul>
       <li>이는 결국 prior term에 대한 의존성이 낮아진다는 것을 의미하며, 이 경우 <strong>MAP가 MLE와 동일해진다</strong>.</li>
@@ -149,13 +148,14 @@
   </li>
 </ul>
 
-\[h_{\mathrm{mle}} := arg\,max_h \log p(\mathcal{D}|h) = arg\,max_h \sum_{n=1}^N \log p(y_n|h \qquad{(2.21)}\]
+\[h_{\mathrm{mle}} := \textrm{argmax}_h \log p(\mathcal{D}|h) = \textrm{argmax}_h \sum_{n=1}^N \log p(y_n|h) \qquad{(2.21)}\]
 
 <ul>
   <li>posterior distribution을 point estimate한다고 가정하자. MLE에서는 당연하겠지만 MAP를 구할때는 probability distribution을 얻을 수 있는데, 그것이 충분히 하나의 점에서의 delta function에 근사한다고 가정하면</li>
 </ul>
 
-<p>\(p(h|\mathcal{D}) \approx \mathbb{I}(h = \hat{h}) \qquad{(2.22)}\)</p>
+\[p(h|\mathcal{D}) \approx \mathbb{I}(h = \hat{h}) \qquad{(2.22)}\]
+
 <ul>
   <li>이를 posterior predictive distribution을 구하는 데 이용되는 Bayesian model averaging에 이용하면</li>
 </ul>
@@ -207,15 +207,23 @@
 
 <ul>
   <li>우선, 주어진 rectangle 안에서 positive data가 random하게 sampling되었다고 가정한다.</li>
-  <li>쉽게 생각하기 위해, 2d rectangle이 아닌 feature가 하나인 1d case를 생각해보자. 이 경우에 likelihood는 모든 positive example이 해당 interval 안에 들어있을 때만 양의 값을 갖는다.
-\(p(\mathcal{D}|\ell, s) = 
+  <li>쉽게 생각하기 위해, 2d rectangle이 아닌 feature가 하나인 1d case를 생각해보자. 이 경우에 likelihood는 모든 positive example이 해당 interval 안에 들어있을 때만 양의 값을 갖는다.</li>
+</ul>
+
+\[p(\mathcal{D}|\ell, s) = 
 \begin{cases}
 s^{-N}, &amp; \text{if} \min (\mathcal{D}) \geq \ell \text{and} \max (\mathcal{D}) \leq \ell + s \\
 0, &amp; \text{otherwise}
-\end{cases}\)</li>
-  <li>만약 두 feature가 independent 하다고 가정하면, 2d case로 쉽게 extend 가능하다.
-\(p(\mathcal{D}|h = p(\mathcal{D}_1|\ell_1, s_1) p(\mathcal{D}_2|\ell_2, s_2) \qquad{(2.25)}\)</li>
-  <li>여기서 \( \mathcal{D}<em>j = {y</em>{nj} : n = 1 : N}\) 은 각 feature dimension에서의 observation 값의 set을 의미한다.</li>
+\end{cases}\]
+
+<ul>
+  <li>만약 두 feature가 independent 하다고 가정하면, 2d case로 쉽게 extend 가능하다.</li>
+</ul>
+
+\[p(\mathcal{D}|h = p(\mathcal{D}_1|\ell_1, s_1) p(\mathcal{D}_2|\ell_2, s_2) \qquad{(2.25)}\]
+
+<ul>
+  <li>여기서 \( \mathcal{D}<em>j = {y</em>{nj} : n = 1 : N} \) 은 각 feature dimension에서의 observation 값의 set을 의미한다.</li>
 </ul>
 
 <h3 id="22-prior">2.2 Prior</h3>
@@ -236,16 +244,7 @@ s^{-N}, &amp; \text{if} \min (\mathcal{D}) \geq \ell \text{and} \max (\mathcal{D
 <ul>
   <li>이를 \( \mathbb{R}^4 \) 상에서 직접 풀어볼 수도 있지만, 시각화하는 것이 매우 어렵기 때문에 좀 더 직관적으로 받아들이기 위해 posterior distribution으로부터 <strong>sampling</strong>을 하겠다.
     <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>\( h^s \sim p(h</td>
-              <td>\mathcal{D}) \) 에서 \( h^s \)는 각각 서로 다른 위치와 크기의 rectangle들이 된다.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
+      <li>\( h^s \sim p(h|\mathcal{D}) \) 에서 \( h^s \)는 각각 서로 다른 위치와 크기의 rectangle들이 된다.</li>
       <li>이러한 샘플된 rectangle들이 회색 박스로 그려져있는 것이 Figure 2.6에 나타나있다.</li>
     </ul>
   </li>
@@ -260,12 +259,12 @@ s^{-N}, &amp; \text{if} \min (\mathcal{D}) \geq \ell \text{and} \max (\mathcal{D
     <ul>
       <li>\( y_{j}^{\textrm{min}} = \min_n y_{nj} \)</li>
       <li>\( y_{j}^{\textrm{max}} = \max_n y_{nj} \)</li>
-      <li>\( d(y_j) = 0 \text{if} y_j^{min} \leq y_j \leq y_j^{max} \)</li>
+      <li>\( d(y_j) = 0, \quad \text{if} \quad y_j^{min} \leq y_j \leq y_j^{max} \)</li>
       <li>\( d(y_j) \): distance to the nearest data point in dimension \( j \).</li>
     </ul>
   </li>
   <li>정의된 위의 notation을 이용하면 (자세한 유도과정은 연습문제 풀이에 정리해놓았다.) 아래 결과를 얻는다.
-\(p(\mathbf{y}|\mathcal{D}) = [\frac{(1 + d(y_1)/r_1}{1 + d(y_2)/r_2}]^{N-1} \qquad{(2.27)}\)</li>
+\(p(\mathbf{y}|\mathcal{D}) = [\frac{1}{(1 + d(y_1)/r_1)(1 + d(y_2)/r_2)}]^{N-1} \qquad{(2.27)}\)</li>
   <li>\( N=1 \)이면, 위 식이 의미없어지기 때문에 predictive distribution이 정의되지 않는다.
     <ul>
       <li>한 가지 data point로부터 rectangle을 infer하는 것이 의미가 없기 때문에, 직관적으로도 말이 된다.</li>
@@ -289,20 +288,14 @@ s^{-N}, &amp; \text{if} \min (\mathcal{D}) \geq \ell \text{and} \max (\mathcal{D
 <h3 id="25-plug-in-approximation">2.5 Plug-in approximation</h3>
 
 <ul>
-  <li>Posterior predictive를 구하는 원래 방법은 모든 hypothesis에 대해 integral을 취하는 것이다.
-\(p(y|\mathcal{D}) = \int_h p(y|h) p(h|\mathcal{D}) \qquad{(2.18)}\)</li>
+  <li>Posterior predictive를 구하는 원래 방법은 모든 hypothesis에 대해 integral을 취하는 것이다.</li>
+</ul>
+
+\[p(y|\mathcal{D}) = \int_h p(y|h) p(h|\mathcal{D}) \qquad{(2.18)}\]
+
+<ul>
   <li>그런데 이 방법이 computationally expensive하고 비현실적이라면 마찬가지로 plug-in approximation을 이용하는 것도 방법이다.</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>\( \hat{\mathbf{\theta}} \) 이 MLE/MAP estimate이라고 할 때 \( p(\mathbf{y}</td>
-          <td>\mathcal{D}) \approx p(\mathbf{y}</td>
-          <td>\hat{\mathbf{\theta}}) \) 를 바로 이용.</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>\( \hat{\mathbf{\theta}} \) 이 MLE/MAP estimate이라고 할 때 \( p(\mathbf{y}|\mathcal{D}) \approx p(\mathbf{y}|\hat{\mathbf{\theta}}) \) 를 바로 이용.</li>
 </ul>
 
 :ET

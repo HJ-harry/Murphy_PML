@@ -1,0 +1,241 @@
+I"�-<ul>
+  <li>Joint probability distribution으로 가장 많이 흔히 이용되는것이 <strong>multivariate gaussian distribution</strong> 혹은 <strong>multivariate normal(MVN) distribution</strong>이다.</li>
+  <li>수학적으로 다루기 편해서 그런것도 있지만, 앞선 이유들 때문에 합리적이기도 하다.</li>
+  <li>PRML의 2단원에 MVN에 관해 굉장히 자세히 다루는데, 정리가 잘 되어있으니 한 번 보는 것을 추천한다.</li>
+</ul>
+
+<h2 id="1-definition">1. Definition</h2>
+
+\[\mathcal{N}(\mathbf{y}|\boldsymbol{\mu},\mathbf{\Sigma}) := \frac{1}{(2\pi)^{D/2}|\mathbf{\Sigma}|^{1/2}} \exp \Big[ -\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu})^T \mathbf{\Sigma}^{-1} (\mathbf{y} - \boldsymbol{\mu}) \Big] \qquad{(3.77)}\]
+
+<ul>
+  <li>\( D \)-dimension일 때 위 식과 같이 정의된다.
+    <ul>
+      <li>\( \boldsymbol{\mu} = \mathbb{E}[\mathbf{y}] \in \mathbb{R}^D \): mean vector</li>
+      <li>\( \mathbf{\Sigma} = \mathrm{Cov}[\mathbf{y}] \): \( D \times D \) covariance matrix</li>
+      <li>여기서 <strong>covariance matrix</strong>란 \( \mathrm{Cov}[\mathbf{y}] := \mathbb{E}\Big[ (y - \mathbb{E}[\mathbf{y}])(y - \mathbb{E}[\mathbf{y}])^T \Big]\)</li>
+    </ul>
+  </li>
+</ul>
+
+\[\begin{align}
+\mathrm{Cov}[Y_i, Y_j] &amp;= \mathbb{E}[(Y_i - \mathbb{E}[Y_i])(Y_j - \mathbb{E}[Y_j])]\\
+&amp;= \mathbb{E}[Y_i Y_j] - \mathbb{E}[Y_i\mathbb{E}[Y_j]] - \mathbb{E}[Y_j\mathbb{E}[Y_i]] + \mathbb{E}[Y_i]\mathbb{E}[Y_j]
+\end{align}\]
+
+<ul>
+  <li>Covariance matrix의 (i, j) 번째 entry는 위와 같다.
+    <ul>
+      <li>따라서 diagonal element들은 \( \mathbb{V}[Y_i] = \mathrm{Cov}[Y_i, Y_i] \) 이다.</li>
+    </ul>
+  </li>
+  <li>Covariance matrix의 정의로부터</li>
+</ul>
+
+\[\begin{align}
+\mathbf{\Sigma} &amp;= \mathbb{E}[(\mathbf{y} - \mathbb{E}[\mathbf{y}])(\mathbf{y} - \mathbb{E}[\mathbf{y}])^T]]\\
+&amp;= \mathbb{E}[\mathbf{y}\mathbf{y}^T - \boldsymbol{\mu}\mathbf{y}T - \mathbf{y}\boldsymbol{\mu}^T + \mu \mu^T]\\
+&amp;= \mathbb{E}[\mathbf{y}\mathbf{y}^T] - \boldsymbol{\mu}\boldsymbol{\mu}^T \qquad{(3.81)}
+\end{align}\]
+
+<ul>
+  <li>exponential term 앞에 붙는 \( Z = (2\pi)^{D/2}|\mathbf{\Sigma}|^{1/2} \)는 normalization constant로 적분값을 1로 만들어주는 역할을 한다.</li>
+  <li>\( D=2 \)일 때를 <strong>bivariate gaussian</strong>이라고 하며, covariance matrix가 달라짐에 따라 서로 다른 모양을 갖는것이 아래 그림들에 표현되어있다.</li>
+</ul>
+<div class="text-center">
+  <img src="/Murphy_PML/images/3.11.PNG" alt="Figure 3.11" height="300px" />
+</div>
+<div class="text-center">
+  <img src="/Murphy_PML/images/3.12.PNG" alt="Figure 3.12" height="300px" />
+</div>
+<ul>
+  <li>Covariance matrix는 정의에 따라 symmetric하므로
+    <ul>
+      <li><strong>full covariance matrix</strong>는 최대 \( D(D+1)/2 \)개의 파라미터를 갖는다.
+        <ul>
+          <li>이 경우에 가장 자유도가 높으므로 자유분방하게 생긴(?) 타원 level set을 생각할 수 있다.</li>
+          <li>3.11과 3.12의 (a)</li>
+        </ul>
+      </li>
+      <li><strong>Diagonal covariance matrix</strong>는 \( Cov[Y_i, Y_j] = 0 \, i \neq j \)인 경우이며 D개의 파라미터 값을 갖는다.
+        <ul>
+          <li>Diagonal matrix가 형성되며, 각 axis에 수직한 타원 level set을 갖는다.</li>
+          <li>3.11과 3.12의 (b)</li>
+        </ul>
+      </li>
+      <li><strong>Isotropic covariance matrix</strong>는 variance값으로 scale된 identity matrix.
+        <ul>
+          <li>3.11과 3.12의 (c)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="2-mahalanobis-distance">2. Mahalanobis distance</h2>
+
+<ul>
+  <li>Normalization constant \( Z \)를 제외하면 결국 gaussian은 exponential function의 형태를 띈다.</li>
+  <li>이를 다루기 편하게 하기 위해 log를 취하고 지수 부분만을 보는 경우가 많은데,</li>
+</ul>
+
+\[\log p(\mathbf{y}|\boldsymbol{\mu}, \mathbf{\Sigma}) = -\frac{1}{2}(\mathbf{y} - \boldsymbol{\mu}^T)\mathbf{\Sigma}^{-1}(\mathbf{y} - \boldsymbol{\mu}) + \mathrm{(const)} \qquad{(3.85)}\]
+
+<ul>
+  <li>위 식과 같이 주어진다. 여기서 <strong>Mahalanobis distance</strong>를 아래와 같이 정의한다.</li>
+</ul>
+
+\[\Delta^2 := (\mathbf{y} - \boldsymbol{\mu})^T \mathbf{\Sigma}^{-1} (\mathbf{y} - \boldsymbol{\mu}) \qquad{(3.86)}\]
+
+<ul>
+  <li>그림 3.12에서 보았던 level set을 생각해보면, 같은 level set은 결국 같은 \( \Delta \) 값을 갖는 것으로 생각할 수 있다.</li>
+  <li>Covariance 값은 non-negative이고, 따라서 <strong>positive semi-definite (PSD)</strong> matrix이다.
+    <ul>
+      <li>책에는 positive definite이라고 나와있고 full rank를 가정하는 것 같은데, 중요한 컨셉은 그게 아니니 넘어가자.</li>
+    </ul>
+  </li>
+  <li>Symmetric PSD matrix는 해당 matrix나 그 matrix의 inverse인 \(\mathbf{\Lambda} = \mathbf{\Sigma}^{-1} \) 모두 diagonalizable 하다.</li>
+  <li>따라서 이를 eigendecomposition해서 표현하면</li>
+</ul>
+
+\[\mathbf{\Sigma} = \sum_{d=1}^D \lambda_d \mathbf{u}_d \mathbf{u}_d^T \qquad{(3.87)}\]
+
+\[\mathbf{\Sigma}^{-1} = \sum_{d=1}^D \frac{1}{\lambda_d} \mathbf{u}_d \mathbf{u}_d^T \qquad{(3.88)}\]
+
+<p>-이렇게 eigenvector와 eigenvalue로 Mahalanobis distance를 표현하고, 추가적으로 \( z_d := \mathbf{u}_d^T (\mathbf{y} - \boldsymbol{\mu})\), 따라서 \( \mathbf{z} = \mathbf{U}(\mathbf{y} - \boldsymbol{\mu}) \)를 이용하면,</p>
+
+\[\begin{align}
+\Delta^2 &amp;= (\mathbf{y} - \boldsymbol{\mu})^T (\sum_{d=1}^D \frac{1}{\lambda_d} \mathbf{u}_d \mathbf{u}_d^T) (\mathbf{y} - \boldsymbol{\mu}) \\
+&amp;= \sum_{d=1}^D \frac{1}{\lambda_d}(\mathbf{y} - \boldsymbol{\mu})^T \mathbf{u}_d \mathbf{u}_d^T (\mathbf{y} - \boldsymbol{\mu}) = \sum_{d=1}^D \frac{z_d^2}{\lambda_d}
+\end{align}\]
+
+<ul>
+  <li>이렇게 식을 바꿔서 해석해보면, 결국 Mahalanobis distance가 같다는 것은 새로운 좌표계인 \( \mathbf{z} \) 좌표계에서 Euclidean distance가 같다는 것을 의미한다.
+    <ul>
+      <li>그리고 이 새로운 좌표계는 \( \mathbf{y} \)를 rotation matrix \( \mathbf{U} \)로 돌리고 \( \mathbf{\Lambda} \)로 scale해서 얻어진다.
+-2-d case로 예를 들자면
+\(\frac{z_1^2}{\lambda_1} + \frac{z_2^2}{\lambda_2} = r \qquad{(3.91)}\)</li>
+    </ul>
+  </li>
+  <li>위에 있는 점들은 모두 같은 Mahalanobis distance를 갖는데, 이 모양은 타원의 형태를 띄므로 Figure 3.12의 level set들이 타원 모양을 가졌던 것이다.</li>
+  <li>PSD matrix는 스칼라 값의 scalar 값을 구하듯이 \( L^T L \)와 같이 factorization도 가능한데, \( \mathbf{\Sigma}^{-1} = \mathbf{L}^T \mathbf{L} \)을 정의하자.
+    <ul>
+      <li>이 때 \( \mathbf{L}: \mathbb{R}^D \mapsto \mathbb{R}^d, \quad d \leq D \) 이며, mahalanobis distance를 \( \boldsymbol{\delta} = \mathbf{y} - \boldsymbol{\mu} \)를 이용해 전개해보면</li>
+    </ul>
+  </li>
+</ul>
+
+\[\Delta^2 = \| \mathbf{L} \boldsymbol{\delta} \|^2_2 \qquad{(3.92)}\]
+
+<ul>
+  <li>위 식을 얻는다. 따라서 \( D \) 보다 작은 dimension인 \( d \) dimension에서의 Euclidean distance로도 생각할 수 있다.</li>
+</ul>
+
+<h2 id="3-marginals-and-conditionals-of-an-mvn">3. Marginals and conditionals of an MVN</h2>
+
+<ul>
+  <li>이제 MVN의 marginal/conditional distribution을 알아볼 것인데, 직접 계산하면서 알아보기 위해 2D discrete case with random variables \( Y_1, Y_2 \) 인 경우를 생각하자.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>\( p(Y_1, Y_2) \)</th>
+      <th>\( Y_1 = 0 \)</th>
+      <th>\( Y_2 = 1 \)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\( Y_1 = 0 \)</td>
+      <td>0.2</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>\( Y_2 = 1 \)</td>
+      <td>0.3</td>
+      <td>0.2</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>\( Y_1, Y_2 \)의 joint distribution이 있을 때 <strong>marginal distribution</strong>은 다음과 같다.</li>
+</ul>
+
+\[p(Y_2 = y_2) = \sum_{y_1}p(Y_1 = y_1, Y_2 = y_2) \qquad{(3.93)}\]
+
+<ul>
+  <li><strong>conditional distribution</strong>은 아래와 같이 정의된다.</li>
+</ul>
+
+\[p(Y_1 = y_1 | Y_2 = y_2) = \frac{p(Y_1 = y_1, Y_2 = y_2)}{p(Y_2 = y_2)} \qquad{(3.94)}\]
+
+<ul>
+  <li>위 결과를 jointly Gaussian random variable에 대해 확장시켜보자.
+    <ul>
+      <li>\( \mathbf{y}_2 \)가 variable of interest일 때 \( \mathbf{y}_1 \)은 <strong>nuisance variable</strong>이라고 부른다.</li>
+      <li>이 nuisance variable을 marginalize out 해보자</li>
+    </ul>
+  </li>
+</ul>
+
+\[p(\mathbf{y}_2) = \int \mathcal{N} (\mathbf{y}| \boldsymbol{\mu}, \Sigma)\,d\mathbf{y}_1 = \mathcal{N}(\mathbf{y}_2|\boldsymbol{\mu}_2, \mathbf{\Sigma}_{22}) \qquad{(3.95)}\]
+
+<ul>
+  <li>위 식에서 이용된 mean과 covariance matrix는 아래와 같다.</li>
+</ul>
+
+\[\boldsymbol{\mu} = \begin{pmatrix}\boldsymbol{\mu}_1 \\ \boldsymbol{\mu}_2\end{pmatrix}\, , \, \mathbf{\Sigma} =
+\begin{pmatrix}
+\mathbf{\Sigma}_{11} &amp; \mathbf{\Sigma}_{12} \\
+\mathbf{\Sigma}_{21} &amp; \mathbf{\Sigma}_{22}
+\end{pmatrix}
+\qquad{(3.96)}\]
+
+<ul>
+  <li>이제 만약 \( \mathbf{y}_2 \)를 observe하고, 이를 통해 \( \mathbf{y}_1 \)의 값을 예측하고 싶다고 하자.</li>
+  <li>이는 결국 posterior인 \( p(\mathbf{y}_1 | \mathbf{y}_2) \)를 예측하는 문제가 되며, 이를 계산해보면 아래와 같은 식이 나온다.</li>
+</ul>
+
+\[p(\mathbf{y}_1 | \mathbf{y}_2) = \mathcal{N}(\mathbf{y}_1|\boldsymbol{\mu}_1 +
+\mathbf{\Sigma}_{12} \mathbf{\Sigma}_{22}^{-1}(\mathbf{y}_2 - \boldsymbol{\mu}_2), \, \mathbf{\Sigma}_{11} - \mathbf{\Sigma}_{12}\mathbf{\Sigma}_{22}^{-1}\mathbf{\Sigma}_{21}) \qquad{(3.94)}\]
+
+<ul>
+  <li>위 식의 mean과 variance를 살표보자
+    <ul>
+      <li>mean: \( \mathbf{y}_2 \)에 대한 linear function이다.</li>
+      <li>variance: \( \mathbf{y}_2 \)에 independent하다. 기존 covariance에만 영향을 받는다는 것을 알 수 있다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="4-example-imputing-missing-values">4. Example: Imputing missing values</h2>
+
+<ul>
+  <li>이번 예제는 \( \mathbf{y} \) 벡터의 일부분 (일부 dimension)만 observe했다고 가정하고, 나머지 missing dimension을 covarinace matrix로부터 유추하는 과정을담는다.
+    <ul>
+      <li>이를 <strong>missing value imputation</strong>이라고 한다.</li>
+    </ul>
+  </li>
+</ul>
+<div class="text-center">
+  <img src="/Murphy_PML/images/3.13.PNG" alt="Figure 3.13" height="300px" />
+</div>
+<ul>
+  <li>위 그림은 MVN을 이용한 missing data imputation의 한 예시이다.
+    <ul>
+      <li>빨간색이 클수록 +쪽으로 크고, 초록색이 클수록 -쪽으로 크다.</li>
+      <li>이런 식의 visualization을 Hinton diagram이라고 한다.</li>
+      <li>(c)는 posterior distribution을 계산해 mean 값을 나타낸 diagram이다. (a)에 있던 데이터만 갖고 유추한 것 치고는 ground truth인 (b)에 가까운 것을 볼 수 있다.</li>
+    </ul>
+  </li>
+  <li>먼저, \( N = 8 \)개의 \( D = 10 \)dimensional vector를 Gaussian에서 sampling 한 후, 각 vector의 50%를 지워버린다.</li>
+  <li>그 후에, 우리가 알고있는 true model parameter로부터 비는 값을 예측한다.
+    <ul>
+      <li>물론 실제로는 이 <em>true parameter</em> 라는 값도 당연히 유추해야겠지만, 예제이므로 알고 있다고 가정한다.</li>
+    </ul>
+  </li>
+  <li>문제를 formulation하자면 이렇다. \( p(\mathbf{y}<em>{n, \mathbf{h}} | \mathbf{y}</em>{n, \mathbf{v}, \boldsymbol{\theta}}}) \)</li>
+</ul>
+:ET

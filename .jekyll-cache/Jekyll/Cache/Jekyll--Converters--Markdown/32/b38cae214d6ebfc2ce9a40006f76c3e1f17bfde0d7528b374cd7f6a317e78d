@@ -1,0 +1,16 @@
+I"�<ul>
+  <li>섹션 (2.4)에서 Machine learning에 어떤 식으로 Bayesian approach를 할 수 있는 지 알아보았다.
+    <ol>
+      <li>(conditional) probability model을 설정하고 \( p(\mathbf{y}|\mathbf{x}, \mathbf{\theta}) \) = \( p(\mathbf{y}|f(\mathbf{x}; \mathbf{\theta})) \), prior \( p(\mathbf{\theta}) \)를 설정한다.</li>
+      <li>Unknown parameter에 대한 posterior \( p(\mathbf{\theta}|\mathcal{D}) \)를 계산한다.</li>
+      <li>Posterior를 이용해 posterior predictive를 계산한다. \( p(\mathbf{y}|\mathbf{x}, \mathcal{D}) \)</li>
+    </ol>
+  </li>
+  <li>이 과정에서도 우리가 정할 수 있는 부분들이 많다.
+    <ul>
+      <li>예를들어 input-output mapping의 종류에 따라 매핑하는 함수 \( f \)를 다르게 설정할 수 있다.</li>
+      <li>하지만 그에 대한 내용은 뒤로 미루고, 본 챕터에서는 \( p(\mathbf{y}|\mathbf{\theta}) \) 자체에 집중하도록 하겠다.</li>
+    </ul>
+  </li>
+</ul>
+:ET
